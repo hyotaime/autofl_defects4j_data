@@ -1,0 +1,7 @@
+**/__pycache__
+.python-version
+
+workspace/trace_data.tar
+workspace/data/*/range/*
+workspace/data/*/trace/*
+workspace/data/*/trace_fixed/*
