@@ -15,7 +15,7 @@ python extract_suspicious.py # This extracts the method snippet of the suspiciou
 
 ## 1-2. All methods 
 ```bash
-python extract_all.py # This extracts the method snippet of the all methods
+python extract_all.py # This extracts the method snippet of all methods
 ```
 
 You can specify the target projects by modifying the `TARGET_PROJECTS` variable.
