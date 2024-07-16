@@ -6,6 +6,8 @@ docker exec -it autofl_data bash
 
 # 1. Extracting data
 
+When you run it for the first time, it may take some time to build and test `gzoltar` (the coverage measurement tool).
+
 ## 1-1. Only suspicious methods (AutoFL settings)
 ```bash
 python extract_suspicious.py # This extracts the method snippet of the suspicious methods in sbfl_method_ranks_full.json 
