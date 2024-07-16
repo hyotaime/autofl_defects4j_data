@@ -3,6 +3,9 @@
 docker run -dt --name autofl_data -v $(pwd)/workspace:/root/workspace agb94/fonte:latest
 docker exec -it autofl_data bash
 ```
+- The directory `./workspace` in the host machine will share data with `/root/workspace` in the container.
+- `$(pwd)`: The current directory. Change it to `${PWD}` or `%cd%` if you're using PowerShell or Windows Command Prompt, respectively.
+
 
 # 1. Extracting data
 
