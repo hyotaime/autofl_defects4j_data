@@ -1,0 +1,2630 @@
+[
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.DEFAULT_JSON_NON_EXECUTABLE",
+        "snippet": "  static final boolean DEFAULT_JSON_NON_EXECUTABLE = false;",
+        "begin_line": 104,
+        "end_line": 104,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.DEFAULT_LENIENT",
+        "snippet": "  static final boolean DEFAULT_LENIENT = false;",
+        "begin_line": 105,
+        "end_line": 105,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.DEFAULT_PRETTY_PRINT",
+        "snippet": "  static final boolean DEFAULT_PRETTY_PRINT = false;",
+        "begin_line": 106,
+        "end_line": 106,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.DEFAULT_ESCAPE_HTML",
+        "snippet": "  static final boolean DEFAULT_ESCAPE_HTML = true;",
+        "begin_line": 107,
+        "end_line": 107,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.DEFAULT_SERIALIZE_NULLS",
+        "snippet": "  static final boolean DEFAULT_SERIALIZE_NULLS = false;",
+        "begin_line": 108,
+        "end_line": 108,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.DEFAULT_COMPLEX_MAP_KEYS",
+        "snippet": "  static final boolean DEFAULT_COMPLEX_MAP_KEYS = false;",
+        "begin_line": 109,
+        "end_line": 109,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.DEFAULT_SPECIALIZE_FLOAT_VALUES",
+        "snippet": "  static final boolean DEFAULT_SPECIALIZE_FLOAT_VALUES = false;",
+        "begin_line": 110,
+        "end_line": 110,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.NULL_KEY_SURROGATE",
+        "snippet": "  private static final TypeToken<?> NULL_KEY_SURROGATE = new TypeToken<Object>() {};",
+        "begin_line": 112,
+        "end_line": 112,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.JSON_NON_EXECUTABLE_PREFIX",
+        "snippet": "  private static final String JSON_NON_EXECUTABLE_PREFIX = \")]}'\\n\";",
+        "begin_line": 113,
+        "end_line": 113,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.calls",
+        "snippet": "  private final ThreadLocal<Map<TypeToken<?>, FutureTypeAdapter<?>>> calls\n      = new ThreadLocal<Map<TypeToken<?>, FutureTypeAdapter<?>>>();",
+        "begin_line": 122,
+        "end_line": 123,
+        "comment": "\n   * This thread local guards against reentrant calls to getAdapter(). In\n   * certain object graphs, creating an adapter for a type may recursively\n   * require an adapter for the same type! Without intervention, the recursive\n   * lookup would stack overflow. We cheat by returning a proxy type adapter.\n   * The proxy is wired up once the initial adapter has been created.\n   "
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.typeTokenCache",
+        "snippet": "  private final Map<TypeToken<?>, TypeAdapter<?>> typeTokenCache = new ConcurrentHashMap<TypeToken<?>, TypeAdapter<?>>();",
+        "begin_line": 125,
+        "end_line": 125,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.factories",
+        "snippet": "  private final List<TypeAdapterFactory> factories;",
+        "begin_line": 127,
+        "end_line": 127,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.constructorConstructor",
+        "snippet": "  private final ConstructorConstructor constructorConstructor;",
+        "begin_line": 128,
+        "end_line": 128,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.serializeNulls",
+        "snippet": "  private final boolean serializeNulls;",
+        "begin_line": 130,
+        "end_line": 130,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.htmlSafe",
+        "snippet": "  private final boolean htmlSafe;",
+        "begin_line": 131,
+        "end_line": 131,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.generateNonExecutableJson",
+        "snippet": "  private final boolean generateNonExecutableJson;",
+        "begin_line": 132,
+        "end_line": 132,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.prettyPrinting",
+        "snippet": "  private final boolean prettyPrinting;",
+        "begin_line": 133,
+        "end_line": 133,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.Gson",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.Gson.lenient",
+        "snippet": "  private final boolean lenient;",
+        "begin_line": 134,
+        "end_line": 134,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.FutureTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/Gson.java",
+        "signature": "com.google.gson.FutureTypeAdapter.delegate",
+        "snippet": "    private TypeAdapter<T> delegate;",
+        "begin_line": 933,
+        "end_line": 933,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonParseException",
+        "src_path": "gson/src/main/java/com/google/gson/JsonParseException.java",
+        "signature": "com.google.gson.JsonParseException.serialVersionUID",
+        "snippet": "  static final long serialVersionUID = -4086729973971783390L;",
+        "begin_line": 33,
+        "end_line": 33,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonIOException",
+        "src_path": "gson/src/main/java/com/google/gson/JsonIOException.java",
+        "signature": "com.google.gson.JsonIOException.serialVersionUID",
+        "snippet": "  private static final long serialVersionUID = 1L;",
+        "begin_line": 26,
+        "end_line": 26,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonPrimitive",
+        "src_path": "gson/src/main/java/com/google/gson/JsonPrimitive.java",
+        "signature": "com.google.gson.JsonPrimitive.PRIMITIVE_TYPES",
+        "snippet": "  private static final Class<?>[] PRIMITIVE_TYPES = { int.class, long.class, short.class,\n      float.class, double.class, byte.class, boolean.class, char.class, Integer.class, Long.class,\n      Short.class, Float.class, Double.class, Byte.class, Boolean.class, Character.class };",
+        "begin_line": 35,
+        "end_line": 37,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonPrimitive",
+        "src_path": "gson/src/main/java/com/google/gson/JsonPrimitive.java",
+        "signature": "com.google.gson.JsonPrimitive.value",
+        "snippet": "  private Object value;",
+        "begin_line": 39,
+        "end_line": 39,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonObject",
+        "src_path": "gson/src/main/java/com/google/gson/JsonObject.java",
+        "signature": "com.google.gson.JsonObject.members",
+        "snippet": "  private final LinkedTreeMap<String, JsonElement> members =\n      new LinkedTreeMap<String, JsonElement>();",
+        "begin_line": 33,
+        "end_line": 34,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.DefaultDateTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java",
+        "signature": "com.google.gson.DefaultDateTypeAdapter.enUsFormat",
+        "snippet": "  private final DateFormat enUsFormat;",
+        "begin_line": 42,
+        "end_line": 42,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.DefaultDateTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/DefaultDateTypeAdapter.java",
+        "signature": "com.google.gson.DefaultDateTypeAdapter.localFormat",
+        "snippet": "  private final DateFormat localFormat;",
+        "begin_line": 43,
+        "end_line": 43,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonStreamParser",
+        "src_path": "gson/src/main/java/com/google/gson/JsonStreamParser.java",
+        "signature": "com.google.gson.JsonStreamParser.parser",
+        "snippet": "  private final JsonReader parser;",
+        "begin_line": 53,
+        "end_line": 53,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonStreamParser",
+        "src_path": "gson/src/main/java/com/google/gson/JsonStreamParser.java",
+        "signature": "com.google.gson.JsonStreamParser.lock",
+        "snippet": "  private final Object lock;",
+        "begin_line": 54,
+        "end_line": 54,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonArray",
+        "src_path": "gson/src/main/java/com/google/gson/JsonArray.java",
+        "signature": "com.google.gson.JsonArray.elements",
+        "snippet": "  private final List<JsonElement> elements;",
+        "begin_line": 34,
+        "end_line": 34,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.excluder",
+        "snippet": "  private Excluder excluder = Excluder.DEFAULT;",
+        "begin_line": 79,
+        "end_line": 79,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.longSerializationPolicy",
+        "snippet": "  private LongSerializationPolicy longSerializationPolicy = LongSerializationPolicy.DEFAULT;",
+        "begin_line": 80,
+        "end_line": 80,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.fieldNamingPolicy",
+        "snippet": "  private FieldNamingStrategy fieldNamingPolicy = FieldNamingPolicy.IDENTITY;",
+        "begin_line": 81,
+        "end_line": 81,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.instanceCreators",
+        "snippet": "  private final Map<Type, InstanceCreator<?>> instanceCreators\n      = new HashMap<Type, InstanceCreator<?>>();",
+        "begin_line": 82,
+        "end_line": 83,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.factories",
+        "snippet": "  private final List<TypeAdapterFactory> factories = new ArrayList<TypeAdapterFactory>();",
+        "begin_line": 84,
+        "end_line": 84,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.hierarchyFactories",
+        "snippet": "  private final List<TypeAdapterFactory> hierarchyFactories = new ArrayList<TypeAdapterFactory>();",
+        "begin_line": 86,
+        "end_line": 86,
+        "comment": " tree-style hierarchy factories. These come after factories for backwards compatibility. "
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.serializeNulls",
+        "snippet": "  private boolean serializeNulls = DEFAULT_SERIALIZE_NULLS;",
+        "begin_line": 87,
+        "end_line": 87,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.datePattern",
+        "snippet": "  private String datePattern;",
+        "begin_line": 88,
+        "end_line": 88,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.dateStyle",
+        "snippet": "  private int dateStyle = DateFormat.DEFAULT;",
+        "begin_line": 89,
+        "end_line": 89,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.timeStyle",
+        "snippet": "  private int timeStyle = DateFormat.DEFAULT;",
+        "begin_line": 90,
+        "end_line": 90,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.complexMapKeySerialization",
+        "snippet": "  private boolean complexMapKeySerialization = DEFAULT_COMPLEX_MAP_KEYS;",
+        "begin_line": 91,
+        "end_line": 91,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.serializeSpecialFloatingPointValues",
+        "snippet": "  private boolean serializeSpecialFloatingPointValues = DEFAULT_SPECIALIZE_FLOAT_VALUES;",
+        "begin_line": 92,
+        "end_line": 92,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.escapeHtmlChars",
+        "snippet": "  private boolean escapeHtmlChars = DEFAULT_ESCAPE_HTML;",
+        "begin_line": 93,
+        "end_line": 93,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.prettyPrinting",
+        "snippet": "  private boolean prettyPrinting = DEFAULT_PRETTY_PRINT;",
+        "begin_line": 94,
+        "end_line": 94,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.generateNonExecutableJson",
+        "snippet": "  private boolean generateNonExecutableJson = DEFAULT_JSON_NON_EXECUTABLE;",
+        "begin_line": 95,
+        "end_line": 95,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.GsonBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/GsonBuilder.java",
+        "signature": "com.google.gson.GsonBuilder.lenient",
+        "snippet": "  private boolean lenient = DEFAULT_LENIENT;",
+        "begin_line": 96,
+        "end_line": 96,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonNull",
+        "src_path": "gson/src/main/java/com/google/gson/JsonNull.java",
+        "signature": "com.google.gson.JsonNull.INSTANCE",
+        "snippet": "  public static final JsonNull INSTANCE = new JsonNull();",
+        "begin_line": 32,
+        "end_line": 32,
+        "comment": "\r\n   * singleton for JsonNull\r\n   *\r\n   * @since 1.8\r\n   "
+    },
+    {
+        "class_name": "com.google.gson.FieldAttributes",
+        "src_path": "gson/src/main/java/com/google/gson/FieldAttributes.java",
+        "signature": "com.google.gson.FieldAttributes.field",
+        "snippet": "  private final Field field;",
+        "begin_line": 37,
+        "end_line": 37,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.JsonSyntaxException",
+        "src_path": "gson/src/main/java/com/google/gson/JsonSyntaxException.java",
+        "signature": "com.google.gson.JsonSyntaxException.serialVersionUID",
+        "snippet": "  private static final long serialVersionUID = 1L;",
+        "begin_line": 27,
+        "end_line": 27,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LazilyParsedNumber",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LazilyParsedNumber.java",
+        "signature": "com.google.gson.internal.LazilyParsedNumber.value",
+        "snippet": "  private final String value;",
+        "begin_line": 27,
+        "end_line": 27,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Primitives",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Primitives.java",
+        "signature": "com.google.gson.internal.Primitives.PRIMITIVE_TO_WRAPPER_TYPE",
+        "snippet": "  private static final Map<Class<?>, Class<?>> PRIMITIVE_TO_WRAPPER_TYPE;",
+        "begin_line": 37,
+        "end_line": 37,
+        "comment": " A map from primitive types to their corresponding wrapper types. "
+    },
+    {
+        "class_name": "com.google.gson.internal.Primitives",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Primitives.java",
+        "signature": "com.google.gson.internal.Primitives.WRAPPER_TO_PRIMITIVE_TYPE",
+        "snippet": "  private static final Map<Class<?>, Class<?>> WRAPPER_TO_PRIMITIVE_TYPE;",
+        "begin_line": 40,
+        "end_line": 40,
+        "comment": " A map from wrapper types to their corresponding primitive types. "
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.IGNORE_VERSIONS",
+        "snippet": "  private static final double IGNORE_VERSIONS = -1.0d;",
+        "begin_line": 51,
+        "end_line": 51,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.DEFAULT",
+        "snippet": "  public static final Excluder DEFAULT = new Excluder();",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.version",
+        "snippet": "  private double version = IGNORE_VERSIONS;",
+        "begin_line": 54,
+        "end_line": 54,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.modifiers",
+        "snippet": "  private int modifiers = Modifier.TRANSIENT | Modifier.STATIC;",
+        "begin_line": 55,
+        "end_line": 55,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.serializeInnerClasses",
+        "snippet": "  private boolean serializeInnerClasses = true;",
+        "begin_line": 56,
+        "end_line": 56,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.requireExpose",
+        "snippet": "  private boolean requireExpose;",
+        "begin_line": 57,
+        "end_line": 57,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.serializationStrategies",
+        "snippet": "  private List<ExclusionStrategy> serializationStrategies = Collections.emptyList();",
+        "begin_line": 58,
+        "end_line": 58,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.deserializationStrategies",
+        "snippet": "  private List<ExclusionStrategy> deserializationStrategies = Collections.emptyList();",
+        "begin_line": 59,
+        "end_line": 59,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Excluder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Excluder.java",
+        "signature": "com.google.gson.internal.Excluder.delegate",
+        "snippet": "      private TypeAdapter<T> delegate;",
+        "begin_line": 122,
+        "end_line": 122,
+        "comment": " The delegate is lazily created because it may not be needed, and creating it may fail. "
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.NATURAL_ORDER",
+        "snippet": "  @SuppressWarnings({ \"unchecked\", \"rawtypes\" }) // to avoid Comparable<Comparable<Comparable<...>>>\n  private static final Comparator<Comparable> NATURAL_ORDER = new Comparator<Comparable>() {\n    public int compare(Comparable a, Comparable b) {\n      return a.compareTo(b);\n    }\n  };",
+        "begin_line": 39,
+        "end_line": 44,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.comparator",
+        "snippet": "  Comparator<? super K> comparator;",
+        "begin_line": 46,
+        "end_line": 46,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.root",
+        "snippet": "  Node<K, V> root;",
+        "begin_line": 47,
+        "end_line": 47,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.size",
+        "snippet": "  int size = 0;",
+        "begin_line": 48,
+        "end_line": 48,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.modCount",
+        "snippet": "  int modCount = 0;",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.header",
+        "snippet": "  final Node<K, V> header = new Node<K, V>();",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": " Used to preserve iteration order"
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.entrySet",
+        "snippet": "  private EntrySet entrySet;",
+        "begin_line": 426,
+        "end_line": 426,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMap.keySet",
+        "snippet": "  private KeySet keySet;",
+        "begin_line": 427,
+        "end_line": 427,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.parent",
+        "snippet": "    Node<K, V> parent;",
+        "begin_line": 440,
+        "end_line": 440,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.left",
+        "snippet": "    Node<K, V> left;",
+        "begin_line": 441,
+        "end_line": 441,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.right",
+        "snippet": "    Node<K, V> right;",
+        "begin_line": 442,
+        "end_line": 442,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.next",
+        "snippet": "    Node<K, V> next;",
+        "begin_line": 443,
+        "end_line": 443,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.prev",
+        "snippet": "    Node<K, V> prev;",
+        "begin_line": 444,
+        "end_line": 444,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.key",
+        "snippet": "    final K key;",
+        "begin_line": 445,
+        "end_line": 445,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.value",
+        "snippet": "    V value;",
+        "begin_line": 446,
+        "end_line": 446,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.Node.height",
+        "snippet": "    int height;",
+        "begin_line": 447,
+        "end_line": 447,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMapIterator",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMapIterator.next",
+        "snippet": "    Node<K, V> next = header.next;",
+        "begin_line": 527,
+        "end_line": 527,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMapIterator",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMapIterator.lastReturned",
+        "snippet": "    Node<K, V> lastReturned = null;",
+        "begin_line": 528,
+        "end_line": 528,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMapIterator",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMapIterator.expectedModCount",
+        "snippet": "    int expectedModCount = modCount;",
+        "begin_line": 529,
+        "end_line": 529,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.AppendableWriter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Streams.java",
+        "signature": "com.google.gson.internal.AppendableWriter.appendable",
+        "snippet": "    private final Appendable appendable;",
+        "begin_line": 85,
+        "end_line": 85,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.AppendableWriter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Streams.java",
+        "signature": "com.google.gson.internal.AppendableWriter.currentWrite",
+        "snippet": "    private final CurrentWrite currentWrite = new CurrentWrite();",
+        "begin_line": 86,
+        "end_line": 86,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.CurrentWrite",
+        "src_path": "gson/src/main/java/com/google/gson/internal/Streams.java",
+        "signature": "com.google.gson.internal.CurrentWrite.chars",
+        "snippet": "      char[] chars;",
+        "begin_line": 108,
+        "end_line": 108,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.JsonReaderInternalAccess",
+        "src_path": "gson/src/main/java/com/google/gson/internal/JsonReaderInternalAccess.java",
+        "signature": "com.google.gson.internal.JsonReaderInternalAccess.INSTANCE",
+        "snippet": "  public static JsonReaderInternalAccess INSTANCE;",
+        "begin_line": 26,
+        "end_line": 26,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.NATURAL_ORDER",
+        "snippet": "  @SuppressWarnings({ \"unchecked\", \"rawtypes\" }) // to avoid Comparable<Comparable<Comparable<...>>>\n  private static final Comparator<Comparable> NATURAL_ORDER = new Comparator<Comparable>() {\n    public int compare(Comparable a, Comparable b) {\n      return a.compareTo(b);\n    }\n  };",
+        "begin_line": 41,
+        "end_line": 46,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.comparator",
+        "snippet": "  Comparator<? super K> comparator;",
+        "begin_line": 48,
+        "end_line": 48,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.table",
+        "snippet": "  Node<K, V>[] table;",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.header",
+        "snippet": "  final Node<K, V> header;",
+        "begin_line": 50,
+        "end_line": 50,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.size",
+        "snippet": "  int size = 0;",
+        "begin_line": 51,
+        "end_line": 51,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.modCount",
+        "snippet": "  int modCount = 0;",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.threshold",
+        "snippet": "  int threshold;",
+        "begin_line": 53,
+        "end_line": 53,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.entrySet",
+        "snippet": "  private EntrySet entrySet;",
+        "begin_line": 454,
+        "end_line": 454,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedHashTreeMap",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedHashTreeMap.keySet",
+        "snippet": "  private KeySet keySet;",
+        "begin_line": 455,
+        "end_line": 455,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.parent",
+        "snippet": "    Node<K, V> parent;",
+        "begin_line": 468,
+        "end_line": 468,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.left",
+        "snippet": "    Node<K, V> left;",
+        "begin_line": 469,
+        "end_line": 469,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.right",
+        "snippet": "    Node<K, V> right;",
+        "begin_line": 470,
+        "end_line": 470,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.next",
+        "snippet": "    Node<K, V> next;",
+        "begin_line": 471,
+        "end_line": 471,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.prev",
+        "snippet": "    Node<K, V> prev;",
+        "begin_line": 472,
+        "end_line": 472,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.key",
+        "snippet": "    final K key;",
+        "begin_line": 473,
+        "end_line": 473,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.hash",
+        "snippet": "    final int hash;",
+        "begin_line": 474,
+        "end_line": 474,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.value",
+        "snippet": "    V value;",
+        "begin_line": 475,
+        "end_line": 475,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.Node",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.Node.height",
+        "snippet": "    int height;",
+        "begin_line": 476,
+        "end_line": 476,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.AvlIterator",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.AvlIterator.stackTop",
+        "snippet": "    private Node<K, V> stackTop;",
+        "begin_line": 624,
+        "end_line": 624,
+        "comment": " This stack is a singly linked list, linked by the 'parent' field. "
+    },
+    {
+        "class_name": "com.google.gson.internal.AvlBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.AvlBuilder.stack",
+        "snippet": "    private Node<K, V> stack;",
+        "begin_line": 672,
+        "end_line": 672,
+        "comment": " This stack is a singly linked list, linked by the 'parent' field. "
+    },
+    {
+        "class_name": "com.google.gson.internal.AvlBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.AvlBuilder.leavesToSkip",
+        "snippet": "    private int leavesToSkip;",
+        "begin_line": 673,
+        "end_line": 673,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.AvlBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.AvlBuilder.leavesSkipped",
+        "snippet": "    private int leavesSkipped;",
+        "begin_line": 674,
+        "end_line": 674,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.AvlBuilder",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.AvlBuilder.size",
+        "snippet": "    private int size;",
+        "begin_line": 675,
+        "end_line": 675,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMapIterator",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMapIterator.next",
+        "snippet": "    Node<K, V> next = header.next;",
+        "begin_line": 761,
+        "end_line": 761,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMapIterator",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMapIterator.lastReturned",
+        "snippet": "    Node<K, V> lastReturned = null;",
+        "begin_line": 762,
+        "end_line": 762,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.LinkedTreeMapIterator",
+        "src_path": "gson/src/main/java/com/google/gson/internal/LinkedHashTreeMap.java",
+        "signature": "com.google.gson.internal.LinkedTreeMapIterator.expectedModCount",
+        "snippet": "    int expectedModCount = modCount;",
+        "begin_line": 763,
+        "end_line": 763,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.ConstructorConstructor",
+        "src_path": "gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java",
+        "signature": "com.google.gson.internal.ConstructorConstructor.instanceCreators",
+        "snippet": "  private final Map<Type, InstanceCreator<?>> instanceCreators;",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.ConstructorConstructor",
+        "src_path": "gson/src/main/java/com/google/gson/internal/ConstructorConstructor.java",
+        "signature": "com.google.gson.internal.ConstructorConstructor.unsafeAllocator",
+        "snippet": "      private final UnsafeAllocator unsafeAllocator = UnsafeAllocator.create();",
+        "begin_line": 219,
+        "end_line": 219,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeWriter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeWriter.UNWRITABLE_WRITER",
+        "snippet": "  private static final Writer UNWRITABLE_WRITER = new Writer() {\n    @Override public void write(char[] buffer, int offset, int counter) {\n      throw new AssertionError();\n    }\n    @Override public void flush() throws IOException {\n      throw new AssertionError();\n    }\n    @Override public void close() throws IOException {\n      throw new AssertionError();\n    }\n  };",
+        "begin_line": 34,
+        "end_line": 44,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeWriter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeWriter.SENTINEL_CLOSED",
+        "snippet": "  private static final JsonPrimitive SENTINEL_CLOSED = new JsonPrimitive(\"closed\");",
+        "begin_line": 46,
+        "end_line": 46,
+        "comment": " Added to the top of the stack when this writer is closed to cause following ops to fail. "
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeWriter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeWriter.stack",
+        "snippet": "  private final List<JsonElement> stack = new ArrayList<JsonElement>();",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": " The JsonElements and JsonArrays under modification, outermost to innermost. "
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeWriter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeWriter.pendingName",
+        "snippet": "  private String pendingName;",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": " The name for the next JSON object value. If non-null, the top of the stack is a JsonObject. "
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeWriter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeWriter.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeWriter.product",
+        "snippet": "  private JsonElement product = JsonNull.INSTANCE; // TODO: is this really what we want?;",
+        "begin_line": 55,
+        "end_line": 55,
+        "comment": " TODO: is this really what we want?;"
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ArrayTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.ArrayTypeAdapter.FACTORY",
+        "snippet": "  public static final TypeAdapterFactory FACTORY = new TypeAdapterFactory() {\n    @SuppressWarnings({\"unchecked\", \"rawtypes\"})\n    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {\n      Type type = typeToken.getType();\n      if (!(type instanceof GenericArrayType || type instanceof Class && ((Class<?>) type).isArray())) {\n        return null;\n      }\n\n      Type componentType = $Gson$Types.getArrayComponentType(type);\n      TypeAdapter<?> componentTypeAdapter = gson.getAdapter(TypeToken.get(componentType));\n      return new ArrayTypeAdapter(\n              gson, componentTypeAdapter, $Gson$Types.getRawType(componentType));\n    }\n  };",
+        "begin_line": 39,
+        "end_line": 52,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ArrayTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.ArrayTypeAdapter.componentType",
+        "snippet": "  private final Class<E> componentType;",
+        "begin_line": 54,
+        "end_line": 54,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ArrayTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ArrayTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.ArrayTypeAdapter.componentTypeAdapter",
+        "snippet": "  private final TypeAdapter<E> componentTypeAdapter;",
+        "begin_line": 55,
+        "end_line": 55,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CLASS",
+        "snippet": "  @SuppressWarnings(\"rawtypes\")\n  public static final TypeAdapter<Class> CLASS = new TypeAdapter<Class>() {\n    @Override\n    public void write(JsonWriter out, Class value) throws IOException {\n      if (value == null) {\n        out.nullValue();\n      } else {\n        throw new UnsupportedOperationException(\"Attempted to serialize java.lang.Class: \"\n            + value.getName() + \". Forgot to register a type adapter?\");\n      }\n    }\n    @Override\n    public Class read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      } else {\n        throw new UnsupportedOperationException(\n            \"Attempted to deserialize a java.lang.Class. Forgot to register a type adapter?\");\n      }\n    }\n  };",
+        "begin_line": 68,
+        "end_line": 89,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CLASS_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory CLASS_FACTORY = newFactory(Class.class, CLASS);",
+        "begin_line": 90,
+        "end_line": 90,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BIT_SET",
+        "snippet": "  public static final TypeAdapter<BitSet> BIT_SET = new TypeAdapter<BitSet>() {\n    @Override public BitSet read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n\n      BitSet bitset = new BitSet();\n      in.beginArray();\n      int i = 0;\n      JsonToken tokenType = in.peek();\n      while (tokenType != JsonToken.END_ARRAY) {\n        boolean set;\n        switch (tokenType) {\n        case NUMBER:\n          set = in.nextInt() != 0;\n          break;\n        case BOOLEAN:\n          set = in.nextBoolean();\n          break;\n        case STRING:\n          String stringValue = in.nextString();\n          try {\n            set = Integer.parseInt(stringValue) != 0;\n          } catch (NumberFormatException e) {\n            throw new JsonSyntaxException(\n                \"Error: Expecting: bitset number value (1, 0), Found: \" + stringValue);\n          }\n          break;\n        default:\n          throw new JsonSyntaxException(\"Invalid bitset value type: \" + tokenType);\n        }\n        if (set) {\n          bitset.set(i);\n        }\n        ++i;\n        tokenType = in.peek();\n      }\n      in.endArray();\n      return bitset;\n    }\n\n    @Override public void write(JsonWriter out, BitSet src) throws IOException {\n      if (src == null) {\n        out.nullValue();\n        return;\n      }\n\n      out.beginArray();\n      for (int i = 0; i < src.length(); i++) {\n        int value = (src.get(i)) ? 1 : 0;\n        out.value(value);\n      }\n      out.endArray();\n    }\n  };",
+        "begin_line": 92,
+        "end_line": 147,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BIT_SET_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory BIT_SET_FACTORY = newFactory(BitSet.class, BIT_SET);",
+        "begin_line": 149,
+        "end_line": 149,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BOOLEAN",
+        "snippet": "  public static final TypeAdapter<Boolean> BOOLEAN = new TypeAdapter<Boolean>() {\n    @Override\n    public Boolean read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      } else if (in.peek() == JsonToken.STRING) {\n        // support strings for compatibility with GSON 1.7\n        return Boolean.parseBoolean(in.nextString());\n      }\n      return in.nextBoolean();\n    }\n    @Override\n    public void write(JsonWriter out, Boolean value) throws IOException {\n      if (value == null) {\n        out.nullValue();\n        return;\n      }\n      out.value(value);\n    }\n  };",
+        "begin_line": 151,
+        "end_line": 171,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BOOLEAN_AS_STRING",
+        "snippet": "  public static final TypeAdapter<Boolean> BOOLEAN_AS_STRING = new TypeAdapter<Boolean>() {\n    @Override public Boolean read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      return Boolean.valueOf(in.nextString());\n    }\n\n    @Override public void write(JsonWriter out, Boolean value) throws IOException {\n      out.value(value == null ? \"null\" : value.toString());\n    }\n  };",
+        "begin_line": 177,
+        "end_line": 189,
+        "comment": "\n   * Writes a boolean as a string. Useful for map keys, where booleans aren't\n   * otherwise permitted.\n   "
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BOOLEAN_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory BOOLEAN_FACTORY\n      = newFactory(boolean.class, Boolean.class, BOOLEAN);",
+        "begin_line": 191,
+        "end_line": 192,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BYTE",
+        "snippet": "  public static final TypeAdapter<Number> BYTE = new TypeAdapter<Number>() {\n    @Override\n    public Number read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      try {\n        int intValue = in.nextInt();\n        return (byte) intValue;\n      } catch (NumberFormatException e) {\n        throw new JsonSyntaxException(e);\n      }\n    }\n    @Override\n    public void write(JsonWriter out, Number value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 194,
+        "end_line": 212,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BYTE_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory BYTE_FACTORY\n      = newFactory(byte.class, Byte.class, BYTE);",
+        "begin_line": 214,
+        "end_line": 215,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.SHORT",
+        "snippet": "  public static final TypeAdapter<Number> SHORT = new TypeAdapter<Number>() {\n    @Override\n    public Number read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      try {\n        return (short) in.nextInt();\n      } catch (NumberFormatException e) {\n        throw new JsonSyntaxException(e);\n      }\n    }\n    @Override\n    public void write(JsonWriter out, Number value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 217,
+        "end_line": 234,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.SHORT_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory SHORT_FACTORY\n      = newFactory(short.class, Short.class, SHORT);",
+        "begin_line": 236,
+        "end_line": 237,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.INTEGER",
+        "snippet": "  public static final TypeAdapter<Number> INTEGER = new TypeAdapter<Number>() {\n    @Override\n    public Number read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      try {\n        return in.nextInt();\n      } catch (NumberFormatException e) {\n        throw new JsonSyntaxException(e);\n      }\n    }\n    @Override\n    public void write(JsonWriter out, Number value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 239,
+        "end_line": 256,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.INTEGER_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory INTEGER_FACTORY\n      = newFactory(int.class, Integer.class, INTEGER);",
+        "begin_line": 257,
+        "end_line": 258,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.ATOMIC_INTEGER",
+        "snippet": "  public static final TypeAdapter<AtomicInteger> ATOMIC_INTEGER = new TypeAdapter<AtomicInteger>() {\n    @Override public AtomicInteger read(JsonReader in) throws IOException {\n      try {\n        return new AtomicInteger(in.nextInt());\n      } catch (NumberFormatException e) {\n        throw new JsonSyntaxException(e);\n      }\n    }\n    @Override public void write(JsonWriter out, AtomicInteger value) throws IOException {\n      out.value(value.get());\n    }\n  }.nullSafe();",
+        "begin_line": 260,
+        "end_line": 271,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.ATOMIC_INTEGER_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory ATOMIC_INTEGER_FACTORY =\n      newFactory(AtomicInteger.class, TypeAdapters.ATOMIC_INTEGER);",
+        "begin_line": 272,
+        "end_line": 273,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.ATOMIC_BOOLEAN",
+        "snippet": "  public static final TypeAdapter<AtomicBoolean> ATOMIC_BOOLEAN = new TypeAdapter<AtomicBoolean>() {\n    @Override public AtomicBoolean read(JsonReader in) throws IOException {\n      return new AtomicBoolean(in.nextBoolean());\n    }\n    @Override public void write(JsonWriter out, AtomicBoolean value) throws IOException {\n      out.value(value.get());\n    }\n  }.nullSafe();",
+        "begin_line": 275,
+        "end_line": 282,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.ATOMIC_BOOLEAN_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory ATOMIC_BOOLEAN_FACTORY =\n      newFactory(AtomicBoolean.class, TypeAdapters.ATOMIC_BOOLEAN);",
+        "begin_line": 283,
+        "end_line": 284,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.ATOMIC_INTEGER_ARRAY",
+        "snippet": "  public static final TypeAdapter<AtomicIntegerArray> ATOMIC_INTEGER_ARRAY = new TypeAdapter<AtomicIntegerArray>() {\n    @Override public AtomicIntegerArray read(JsonReader in) throws IOException {\n        List<Integer> list = new ArrayList<Integer>();\n        in.beginArray();\n        while (in.hasNext()) {\n          try {\n            int integer = in.nextInt();\n            list.add(integer);\n          } catch (NumberFormatException e) {\n            throw new JsonSyntaxException(e);\n          }\n        }\n        in.endArray();\n        int length = list.size();\n        AtomicIntegerArray array = new AtomicIntegerArray(length);\n        for (int i = 0; i < length; ++i) {\n          array.set(i, list.get(i));\n        }\n        return array;\n    }\n    @Override public void write(JsonWriter out, AtomicIntegerArray value) throws IOException {\n      out.beginArray();\n      for (int i = 0, length = value.length(); i < length; i++) {\n        out.value(value.get(i));\n      }\n      out.endArray();\n    }\n  }.nullSafe();",
+        "begin_line": 286,
+        "end_line": 313,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.ATOMIC_INTEGER_ARRAY_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory ATOMIC_INTEGER_ARRAY_FACTORY =\n      newFactory(AtomicIntegerArray.class, TypeAdapters.ATOMIC_INTEGER_ARRAY);",
+        "begin_line": 314,
+        "end_line": 315,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.LONG",
+        "snippet": "  public static final TypeAdapter<Number> LONG = new TypeAdapter<Number>() {\n    @Override\n    public Number read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      try {\n        return in.nextLong();\n      } catch (NumberFormatException e) {\n        throw new JsonSyntaxException(e);\n      }\n    }\n    @Override\n    public void write(JsonWriter out, Number value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 317,
+        "end_line": 334,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.FLOAT",
+        "snippet": "  public static final TypeAdapter<Number> FLOAT = new TypeAdapter<Number>() {\n    @Override\n    public Number read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      return (float) in.nextDouble();\n    }\n    @Override\n    public void write(JsonWriter out, Number value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 336,
+        "end_line": 349,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.DOUBLE",
+        "snippet": "  public static final TypeAdapter<Number> DOUBLE = new TypeAdapter<Number>() {\n    @Override\n    public Number read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      return in.nextDouble();\n    }\n    @Override\n    public void write(JsonWriter out, Number value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 351,
+        "end_line": 364,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.NUMBER",
+        "snippet": "  public static final TypeAdapter<Number> NUMBER = new TypeAdapter<Number>() {\n    @Override\n    public Number read(JsonReader in) throws IOException {\n      JsonToken jsonToken = in.peek();\n      switch (jsonToken) {\n      case NULL:\n        in.nextNull();\n        return null;\n      case NUMBER:\n        return new LazilyParsedNumber(in.nextString());\n      default:\n        throw new JsonSyntaxException(\"Expecting number, got: \" + jsonToken);\n      }\n    }\n    @Override\n    public void write(JsonWriter out, Number value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 366,
+        "end_line": 384,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.NUMBER_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory NUMBER_FACTORY = newFactory(Number.class, NUMBER);",
+        "begin_line": 386,
+        "end_line": 386,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CHARACTER",
+        "snippet": "  public static final TypeAdapter<Character> CHARACTER = new TypeAdapter<Character>() {\n    @Override\n    public Character read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      String str = in.nextString();\n      if (str.length() != 1) {\n        throw new JsonSyntaxException(\"Expecting character, got: \" + str);\n      }\n      return str.charAt(0);\n    }\n    @Override\n    public void write(JsonWriter out, Character value) throws IOException {\n      out.value(value == null ? null : String.valueOf(value));\n    }\n  };",
+        "begin_line": 388,
+        "end_line": 405,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CHARACTER_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory CHARACTER_FACTORY\n      = newFactory(char.class, Character.class, CHARACTER);",
+        "begin_line": 407,
+        "end_line": 408,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.STRING",
+        "snippet": "  public static final TypeAdapter<String> STRING = new TypeAdapter<String>() {\n    @Override\n    public String read(JsonReader in) throws IOException {\n      JsonToken peek = in.peek();\n      if (peek == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      /* coerce booleans to strings for backwards compatibility */\n      if (peek == JsonToken.BOOLEAN) {\n        return Boolean.toString(in.nextBoolean());\n      }\n      return in.nextString();\n    }\n    @Override\n    public void write(JsonWriter out, String value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 410,
+        "end_line": 428,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BIG_DECIMAL",
+        "snippet": "  public static final TypeAdapter<BigDecimal> BIG_DECIMAL = new TypeAdapter<BigDecimal>() {\n    @Override public BigDecimal read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      try {\n        return new BigDecimal(in.nextString());\n      } catch (NumberFormatException e) {\n        throw new JsonSyntaxException(e);\n      }\n    }\n\n    @Override public void write(JsonWriter out, BigDecimal value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 430,
+        "end_line": 446,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.BIG_INTEGER",
+        "snippet": "  public static final TypeAdapter<BigInteger> BIG_INTEGER = new TypeAdapter<BigInteger>() {\n    @Override public BigInteger read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      try {\n        return new BigInteger(in.nextString());\n      } catch (NumberFormatException e) {\n        throw new JsonSyntaxException(e);\n      }\n    }\n\n    @Override public void write(JsonWriter out, BigInteger value) throws IOException {\n      out.value(value);\n    }\n  };",
+        "begin_line": 448,
+        "end_line": 464,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.STRING_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory STRING_FACTORY = newFactory(String.class, STRING);",
+        "begin_line": 466,
+        "end_line": 466,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.STRING_BUILDER",
+        "snippet": "  public static final TypeAdapter<StringBuilder> STRING_BUILDER = new TypeAdapter<StringBuilder>() {\n    @Override\n    public StringBuilder read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      return new StringBuilder(in.nextString());\n    }\n    @Override\n    public void write(JsonWriter out, StringBuilder value) throws IOException {\n      out.value(value == null ? null : value.toString());\n    }\n  };",
+        "begin_line": 468,
+        "end_line": 481,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.STRING_BUILDER_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory STRING_BUILDER_FACTORY =\n    newFactory(StringBuilder.class, STRING_BUILDER);",
+        "begin_line": 483,
+        "end_line": 484,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.STRING_BUFFER",
+        "snippet": "  public static final TypeAdapter<StringBuffer> STRING_BUFFER = new TypeAdapter<StringBuffer>() {\n    @Override\n    public StringBuffer read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      return new StringBuffer(in.nextString());\n    }\n    @Override\n    public void write(JsonWriter out, StringBuffer value) throws IOException {\n      out.value(value == null ? null : value.toString());\n    }\n  };",
+        "begin_line": 486,
+        "end_line": 499,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.STRING_BUFFER_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory STRING_BUFFER_FACTORY =\n    newFactory(StringBuffer.class, STRING_BUFFER);",
+        "begin_line": 501,
+        "end_line": 502,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.URL",
+        "snippet": "  public static final TypeAdapter<URL> URL = new TypeAdapter<URL>() {\n    @Override\n    public URL read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      String nextString = in.nextString();\n      return \"null\".equals(nextString) ? null : new URL(nextString);\n    }\n    @Override\n    public void write(JsonWriter out, URL value) throws IOException {\n      out.value(value == null ? null : value.toExternalForm());\n    }\n  };",
+        "begin_line": 504,
+        "end_line": 518,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.URL_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory URL_FACTORY = newFactory(URL.class, URL);",
+        "begin_line": 520,
+        "end_line": 520,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.URI",
+        "snippet": "  public static final TypeAdapter<URI> URI = new TypeAdapter<URI>() {\n    @Override\n    public URI read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      try {\n        String nextString = in.nextString();\n        return \"null\".equals(nextString) ? null : new URI(nextString);\n      } catch (URISyntaxException e) {\n        throw new JsonIOException(e);\n      }\n    }\n    @Override\n    public void write(JsonWriter out, URI value) throws IOException {\n      out.value(value == null ? null : value.toASCIIString());\n    }\n  };",
+        "begin_line": 522,
+        "end_line": 540,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.URI_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory URI_FACTORY = newFactory(URI.class, URI);",
+        "begin_line": 542,
+        "end_line": 542,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.INET_ADDRESS",
+        "snippet": "  public static final TypeAdapter<InetAddress> INET_ADDRESS = new TypeAdapter<InetAddress>() {\n    @Override\n    public InetAddress read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      // regrettably, this should have included both the host name and the host address\n      return InetAddress.getByName(in.nextString());\n    }\n    @Override\n    public void write(JsonWriter out, InetAddress value) throws IOException {\n      out.value(value == null ? null : value.getHostAddress());\n    }\n  };",
+        "begin_line": 544,
+        "end_line": 558,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.INET_ADDRESS_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory INET_ADDRESS_FACTORY =\n    newTypeHierarchyFactory(InetAddress.class, INET_ADDRESS);",
+        "begin_line": 560,
+        "end_line": 561,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.UUID",
+        "snippet": "  public static final TypeAdapter<UUID> UUID = new TypeAdapter<UUID>() {\n    @Override\n    public UUID read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      return java.util.UUID.fromString(in.nextString());\n    }\n    @Override\n    public void write(JsonWriter out, UUID value) throws IOException {\n      out.value(value == null ? null : value.toString());\n    }\n  };",
+        "begin_line": 563,
+        "end_line": 576,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.UUID_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory UUID_FACTORY = newFactory(UUID.class, UUID);",
+        "begin_line": 578,
+        "end_line": 578,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CURRENCY",
+        "snippet": "  public static final TypeAdapter<Currency> CURRENCY = new TypeAdapter<Currency>() {\n    @Override\n    public Currency read(JsonReader in) throws IOException {\n      return Currency.getInstance(in.nextString());\n    }\n    @Override\n    public void write(JsonWriter out, Currency value) throws IOException {\n      out.value(value.getCurrencyCode());\n    }\n  }.nullSafe();",
+        "begin_line": 580,
+        "end_line": 589,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CURRENCY_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory CURRENCY_FACTORY = newFactory(Currency.class, CURRENCY);",
+        "begin_line": 590,
+        "end_line": 590,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.TIMESTAMP_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory TIMESTAMP_FACTORY = new TypeAdapterFactory() {\n    @SuppressWarnings(\"unchecked\") // we use a runtime check to make sure the 'T's equal\n    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {\n      if (typeToken.getRawType() != Timestamp.class) {\n        return null;\n      }\n\n      final TypeAdapter<Date> dateTypeAdapter = gson.getAdapter(Date.class);\n      return (TypeAdapter<T>) new TypeAdapter<Timestamp>() {\n        @Override public Timestamp read(JsonReader in) throws IOException {\n          Date date = dateTypeAdapter.read(in);\n          return date != null ? new Timestamp(date.getTime()) : null;\n        }\n\n        @Override public void write(JsonWriter out, Timestamp value) throws IOException {\n          dateTypeAdapter.write(out, value);\n        }\n      };\n    }\n  };",
+        "begin_line": 592,
+        "end_line": 611,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CALENDAR",
+        "snippet": "  public static final TypeAdapter<Calendar> CALENDAR = new TypeAdapter<Calendar>() {\n    private static final String YEAR = \"year\";\n    private static final String MONTH = \"month\";\n    private static final String DAY_OF_MONTH = \"dayOfMonth\";\n    private static final String HOUR_OF_DAY = \"hourOfDay\";\n    private static final String MINUTE = \"minute\";\n    private static final String SECOND = \"second\";\n\n    @Override\n    public Calendar read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return  null;\n      }\n      in.beginObject();\n      int year = 0;\n      int month = 0;\n      int dayOfMonth = 0;\n      int hourOfDay = 0;\n      int minute = 0;\n      int second = 0;\n      while (in.peek() != JsonToken.END_OBJECT) {\n        String name = in.nextName();\n        int value = in.nextInt();\n        if (YEAR.equals(name)) {\n          year = value;\n        } else if (MONTH.equals(name)) {\n          month = value;\n        } else if (DAY_OF_MONTH.equals(name)) {\n          dayOfMonth = value;\n        } else if (HOUR_OF_DAY.equals(name)) {\n          hourOfDay = value;\n        } else if (MINUTE.equals(name)) {\n          minute = value;\n        } else if (SECOND.equals(name)) {\n          second = value;\n        }\n      }\n      in.endObject();\n      return new GregorianCalendar(year, month, dayOfMonth, hourOfDay, minute, second);\n    }\n\n    @Override\n    public void write(JsonWriter out, Calendar value) throws IOException {\n      if (value == null) {\n        out.nullValue();\n        return;\n      }\n      out.beginObject();\n      out.name(YEAR);\n      out.value(value.get(Calendar.YEAR));\n      out.name(MONTH);\n      out.value(value.get(Calendar.MONTH));\n      out.name(DAY_OF_MONTH);\n      out.value(value.get(Calendar.DAY_OF_MONTH));\n      out.name(HOUR_OF_DAY);\n      out.value(value.get(Calendar.HOUR_OF_DAY));\n      out.name(MINUTE);\n      out.value(value.get(Calendar.MINUTE));\n      out.name(SECOND);\n      out.value(value.get(Calendar.SECOND));\n      out.endObject();\n    }\n  };",
+        "begin_line": 613,
+        "end_line": 676,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.YEAR",
+        "snippet": "    private static final String YEAR = \"year\";",
+        "begin_line": 614,
+        "end_line": 614,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.MONTH",
+        "snippet": "    private static final String MONTH = \"month\";",
+        "begin_line": 615,
+        "end_line": 615,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.DAY_OF_MONTH",
+        "snippet": "    private static final String DAY_OF_MONTH = \"dayOfMonth\";",
+        "begin_line": 616,
+        "end_line": 616,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.HOUR_OF_DAY",
+        "snippet": "    private static final String HOUR_OF_DAY = \"hourOfDay\";",
+        "begin_line": 617,
+        "end_line": 617,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.MINUTE",
+        "snippet": "    private static final String MINUTE = \"minute\";",
+        "begin_line": 618,
+        "end_line": 618,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.SECOND",
+        "snippet": "    private static final String SECOND = \"second\";",
+        "begin_line": 619,
+        "end_line": 619,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.CALENDAR_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory CALENDAR_FACTORY =\n    newFactoryForMultipleTypes(Calendar.class, GregorianCalendar.class, CALENDAR);",
+        "begin_line": 678,
+        "end_line": 679,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.LOCALE",
+        "snippet": "  public static final TypeAdapter<Locale> LOCALE = new TypeAdapter<Locale>() {\n    @Override\n    public Locale read(JsonReader in) throws IOException {\n      if (in.peek() == JsonToken.NULL) {\n        in.nextNull();\n        return null;\n      }\n      String locale = in.nextString();\n      StringTokenizer tokenizer = new StringTokenizer(locale, \"_\");\n      String language = null;\n      String country = null;\n      String variant = null;\n      if (tokenizer.hasMoreElements()) {\n        language = tokenizer.nextToken();\n      }\n      if (tokenizer.hasMoreElements()) {\n        country = tokenizer.nextToken();\n      }\n      if (tokenizer.hasMoreElements()) {\n        variant = tokenizer.nextToken();\n      }\n      if (country == null && variant == null) {\n        return new Locale(language);\n      } else if (variant == null) {\n        return new Locale(language, country);\n      } else {\n        return new Locale(language, country, variant);\n      }\n    }\n    @Override\n    public void write(JsonWriter out, Locale value) throws IOException {\n      out.value(value == null ? null : value.toString());\n    }\n  };",
+        "begin_line": 681,
+        "end_line": 714,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.LOCALE_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory LOCALE_FACTORY = newFactory(Locale.class, LOCALE);",
+        "begin_line": 716,
+        "end_line": 716,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.JSON_ELEMENT",
+        "snippet": "  public static final TypeAdapter<JsonElement> JSON_ELEMENT = new TypeAdapter<JsonElement>() {\n    @Override public JsonElement read(JsonReader in) throws IOException {\n      switch (in.peek()) {\n      case STRING:\n        return new JsonPrimitive(in.nextString());\n      case NUMBER:\n        String number = in.nextString();\n        return new JsonPrimitive(new LazilyParsedNumber(number));\n      case BOOLEAN:\n        return new JsonPrimitive(in.nextBoolean());\n      case NULL:\n        in.nextNull();\n        return JsonNull.INSTANCE;\n      case BEGIN_ARRAY:\n        JsonArray array = new JsonArray();\n        in.beginArray();\n        while (in.hasNext()) {\n          array.add(read(in));\n        }\n        in.endArray();\n        return array;\n      case BEGIN_OBJECT:\n        JsonObject object = new JsonObject();\n        in.beginObject();\n        while (in.hasNext()) {\n          object.add(in.nextName(), read(in));\n        }\n        in.endObject();\n        return object;\n      case END_DOCUMENT:\n      case NAME:\n      case END_OBJECT:\n      case END_ARRAY:\n      default:\n        throw new IllegalArgumentException();\n      }\n    }\n\n    @Override public void write(JsonWriter out, JsonElement value) throws IOException {\n      if (value == null || value.isJsonNull()) {\n        out.nullValue();\n      } else if (value.isJsonPrimitive()) {\n        JsonPrimitive primitive = value.getAsJsonPrimitive();\n        if (primitive.isNumber()) {\n          out.value(primitive.getAsNumber());\n        } else if (primitive.isBoolean()) {\n          out.value(primitive.getAsBoolean());\n        } else {\n          out.value(primitive.getAsString());\n        }\n\n      } else if (value.isJsonArray()) {\n        out.beginArray();\n        for (JsonElement e : value.getAsJsonArray()) {\n          write(out, e);\n        }\n        out.endArray();\n\n      } else if (value.isJsonObject()) {\n        out.beginObject();\n        for (Map.Entry<String, JsonElement> e : value.getAsJsonObject().entrySet()) {\n          out.name(e.getKey());\n          write(out, e.getValue());\n        }\n        out.endObject();\n\n      } else {\n        throw new IllegalArgumentException(\"Couldn't write \" + value.getClass());\n      }\n    }\n  };",
+        "begin_line": 718,
+        "end_line": 788,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.JSON_ELEMENT_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory JSON_ELEMENT_FACTORY\n      = newTypeHierarchyFactory(JsonElement.class, JSON_ELEMENT);",
+        "begin_line": 790,
+        "end_line": 791,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.EnumTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.EnumTypeAdapter.nameToConstant",
+        "snippet": "    private final Map<String, T> nameToConstant = new HashMap<String, T>();",
+        "begin_line": 794,
+        "end_line": 794,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.EnumTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.EnumTypeAdapter.constantToName",
+        "snippet": "    private final Map<T, String> constantToName = new HashMap<T, String>();",
+        "begin_line": 795,
+        "end_line": 795,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapters",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapters.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapters.ENUM_FACTORY",
+        "snippet": "  public static final TypeAdapterFactory ENUM_FACTORY = new TypeAdapterFactory() {\n    @SuppressWarnings({\"rawtypes\", \"unchecked\"})\n    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {\n      Class<? super T> rawType = typeToken.getRawType();\n      if (!Enum.class.isAssignableFrom(rawType) || rawType == Enum.class) {\n        return null;\n      }\n      if (!rawType.isEnum()) {\n        rawType = rawType.getSuperclass(); // handle anonymous subclasses\n      }\n      return (TypeAdapter<T>) new EnumTypeAdapter(rawType);\n    }\n  };",
+        "begin_line": 828,
+        "end_line": 840,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.DateTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/DateTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.DateTypeAdapter.FACTORY",
+        "snippet": "  public static final TypeAdapterFactory FACTORY = new TypeAdapterFactory() {\n    @SuppressWarnings(\"unchecked\") // we use a runtime check to make sure the 'T's equal\n    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {\n      return typeToken.getRawType() == Date.class ? (TypeAdapter<T>) new DateTypeAdapter() : null;\n    }\n  };",
+        "begin_line": 42,
+        "end_line": 47,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.DateTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/DateTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.DateTypeAdapter.enUsFormat",
+        "snippet": "  private final DateFormat enUsFormat\n      = DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, Locale.US);",
+        "begin_line": 49,
+        "end_line": 50,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.DateTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/DateTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.DateTypeAdapter.localFormat",
+        "snippet": "  private final DateFormat localFormat\n      = DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT);",
+        "begin_line": 51,
+        "end_line": 52,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.MapTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.MapTypeAdapterFactory.constructorConstructor",
+        "snippet": "  private final ConstructorConstructor constructorConstructor;",
+        "begin_line": 106,
+        "end_line": 106,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.MapTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.MapTypeAdapterFactory.complexMapKeySerialization",
+        "snippet": "  final boolean complexMapKeySerialization;",
+        "begin_line": 107,
+        "end_line": 107,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.Adapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.Adapter.keyTypeAdapter",
+        "snippet": "    private final TypeAdapter<K> keyTypeAdapter;",
+        "begin_line": 146,
+        "end_line": 146,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.Adapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.Adapter.valueTypeAdapter",
+        "snippet": "    private final TypeAdapter<V> valueTypeAdapter;",
+        "begin_line": 147,
+        "end_line": 147,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.Adapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/MapTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.Adapter.constructor",
+        "snippet": "    private final ObjectConstructor<? extends Map<K, V>> constructor;",
+        "begin_line": 148,
+        "end_line": 148,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.SqlDateTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/SqlDateTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.SqlDateTypeAdapter.FACTORY",
+        "snippet": "  public static final TypeAdapterFactory FACTORY = new TypeAdapterFactory() {\n    @SuppressWarnings(\"unchecked\") // we use a runtime check to make sure the 'T's equal\n    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {\n      return typeToken.getRawType() == java.sql.Date.class\n          ? (TypeAdapter<T>) new SqlDateTypeAdapter() : null;\n    }\n  };",
+        "begin_line": 39,
+        "end_line": 45,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.SqlDateTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/SqlDateTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.SqlDateTypeAdapter.format",
+        "snippet": "  private final DateFormat format = new SimpleDateFormat(\"MMM d, yyyy\");",
+        "begin_line": 47,
+        "end_line": 47,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.CollectionTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.constructorConstructor",
+        "snippet": "  private final ConstructorConstructor constructorConstructor;",
+        "begin_line": 37,
+        "end_line": 37,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.Adapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.Adapter.elementTypeAdapter",
+        "snippet": "    private final TypeAdapter<E> elementTypeAdapter;",
+        "begin_line": 62,
+        "end_line": 62,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.Adapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/CollectionTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.Adapter.constructor",
+        "snippet": "    private final ObjectConstructor<? extends Collection<E>> constructor;",
+        "begin_line": 63,
+        "end_line": 63,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeReader",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeReader.UNREADABLE_READER",
+        "snippet": "  private static final Reader UNREADABLE_READER = new Reader() {\n    @Override public int read(char[] buffer, int offset, int count) throws IOException {\n      throw new AssertionError();\n    }\n    @Override public void close() throws IOException {\n      throw new AssertionError();\n    }\n  };",
+        "begin_line": 40,
+        "end_line": 47,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeReader",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeReader.SENTINEL_CLOSED",
+        "snippet": "  private static final Object SENTINEL_CLOSED = new Object();",
+        "begin_line": 48,
+        "end_line": 48,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonTreeReader",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonTreeReader.java",
+        "signature": "com.google.gson.internal.bind.JsonTreeReader.stack",
+        "snippet": "  private final List<Object> stack = new ArrayList<Object>();",
+        "begin_line": 50,
+        "end_line": 50,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ObjectTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ObjectTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.ObjectTypeAdapter.FACTORY",
+        "snippet": "  public static final TypeAdapterFactory FACTORY = new TypeAdapterFactory() {\n    @SuppressWarnings(\"unchecked\")\n    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {\n      if (type.getRawType() == Object.class) {\n        return (TypeAdapter<T>) new ObjectTypeAdapter(gson);\n      }\n      return null;\n    }\n  };",
+        "begin_line": 38,
+        "end_line": 46,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ObjectTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ObjectTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.ObjectTypeAdapter.gson",
+        "snippet": "  private final Gson gson;",
+        "begin_line": 48,
+        "end_line": 48,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.context",
+        "snippet": "  private final Gson context;",
+        "begin_line": 28,
+        "end_line": 28,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.delegate",
+        "snippet": "  private final TypeAdapter<T> delegate;",
+        "begin_line": 29,
+        "end_line": 29,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TypeAdapterRuntimeTypeWrapper.java",
+        "signature": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper.type",
+        "snippet": "  private final Type type;",
+        "begin_line": 30,
+        "end_line": 30,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TimeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TimeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TimeTypeAdapter.FACTORY",
+        "snippet": "  public static final TypeAdapterFactory FACTORY = new TypeAdapterFactory() {\n    @SuppressWarnings(\"unchecked\") // we use a runtime check to make sure the 'T's equal\n    @Override public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken) {\n      return typeToken.getRawType() == Time.class ? (TypeAdapter<T>) new TimeTypeAdapter() : null;\n    }\n  };",
+        "begin_line": 41,
+        "end_line": 46,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TimeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TimeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TimeTypeAdapter.format",
+        "snippet": "  private final DateFormat format = new SimpleDateFormat(\"hh:mm:ss a\");",
+        "begin_line": 48,
+        "end_line": 48,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/JsonAdapterAnnotationTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory.constructorConstructor",
+        "snippet": "  private final ConstructorConstructor constructorConstructor;",
+        "begin_line": 34,
+        "end_line": 34,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TreeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TreeTypeAdapter.serializer",
+        "snippet": "  private final JsonSerializer<T> serializer;",
+        "begin_line": 42,
+        "end_line": 42,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TreeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TreeTypeAdapter.deserializer",
+        "snippet": "  private final JsonDeserializer<T> deserializer;",
+        "begin_line": 43,
+        "end_line": 43,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TreeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TreeTypeAdapter.gson",
+        "snippet": "  private final Gson gson;",
+        "begin_line": 44,
+        "end_line": 44,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TreeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TreeTypeAdapter.typeToken",
+        "snippet": "  private final TypeToken<T> typeToken;",
+        "begin_line": 45,
+        "end_line": 45,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TreeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TreeTypeAdapter.skipPast",
+        "snippet": "  private final TypeAdapterFactory skipPast;",
+        "begin_line": 46,
+        "end_line": 46,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TreeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TreeTypeAdapter.context",
+        "snippet": "  private final GsonContextImpl context = new GsonContextImpl();",
+        "begin_line": 47,
+        "end_line": 47,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.TreeTypeAdapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.TreeTypeAdapter.delegate",
+        "snippet": "  private TypeAdapter<T> delegate;",
+        "begin_line": 50,
+        "end_line": 50,
+        "comment": " The delegate is lazily created because it may not be needed, and creating it may fail. "
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.SingleTypeFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.SingleTypeFactory.exactType",
+        "snippet": "    private final TypeToken<?> exactType;",
+        "begin_line": 120,
+        "end_line": 120,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.SingleTypeFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.SingleTypeFactory.matchRawType",
+        "snippet": "    private final boolean matchRawType;",
+        "begin_line": 121,
+        "end_line": 121,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.SingleTypeFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.SingleTypeFactory.hierarchyType",
+        "snippet": "    private final Class<?> hierarchyType;",
+        "begin_line": 122,
+        "end_line": 122,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.SingleTypeFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.SingleTypeFactory.serializer",
+        "snippet": "    private final JsonSerializer<?> serializer;",
+        "begin_line": 123,
+        "end_line": 123,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.SingleTypeFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/TreeTypeAdapter.java",
+        "signature": "com.google.gson.internal.bind.SingleTypeFactory.deserializer",
+        "snippet": "    private final JsonDeserializer<?> deserializer;",
+        "begin_line": 124,
+        "end_line": 124,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.constructorConstructor",
+        "snippet": "  private final ConstructorConstructor constructorConstructor;",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.fieldNamingPolicy",
+        "snippet": "  private final FieldNamingStrategy fieldNamingPolicy;",
+        "begin_line": 50,
+        "end_line": 50,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.excluder",
+        "snippet": "  private final Excluder excluder;",
+        "begin_line": 51,
+        "end_line": 51,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.typeAdapter",
+        "snippet": "      final TypeAdapter<?> typeAdapter = getFieldAdapter(context, field, fieldType);",
+        "begin_line": 105,
+        "end_line": 105,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.BoundField",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.BoundField.name",
+        "snippet": "    final String name;",
+        "begin_line": 177,
+        "end_line": 177,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.BoundField",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.BoundField.serialized",
+        "snippet": "    final boolean serialized;",
+        "begin_line": 178,
+        "end_line": 178,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.BoundField",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.BoundField.deserialized",
+        "snippet": "    final boolean deserialized;",
+        "begin_line": 179,
+        "end_line": 179,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.Adapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.Adapter.constructor",
+        "snippet": "    private final ObjectConstructor<T> constructor;",
+        "begin_line": 192,
+        "end_line": 192,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.Adapter",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/ReflectiveTypeAdapterFactory.java",
+        "signature": "com.google.gson.internal.bind.Adapter.boundFields",
+        "snippet": "    private final Map<String, BoundField> boundFields;",
+        "begin_line": 193,
+        "end_line": 193,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.util.ISO8601Utils",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java",
+        "signature": "com.google.gson.internal.bind.util.ISO8601Utils.UTC_ID",
+        "snippet": "    private static final String UTC_ID = \"UTC\";",
+        "begin_line": 24,
+        "end_line": 24,
+        "comment": "\n     * ID to represent the 'UTC' string, default timezone since Jackson 2.7\n     * \n     * @since 2.7\n     "
+    },
+    {
+        "class_name": "com.google.gson.internal.bind.util.ISO8601Utils",
+        "src_path": "gson/src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java",
+        "signature": "com.google.gson.internal.bind.util.ISO8601Utils.TIMEZONE_UTC",
+        "snippet": "    private static final TimeZone TIMEZONE_UTC = TimeZone.getTimeZone(UTC_ID);",
+        "begin_line": 30,
+        "end_line": 30,
+        "comment": "\n     * The UTC timezone, prefetched to avoid more lookups.\n     * \n     * @since 2.7\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.REPLACEMENT_CHARS",
+        "snippet": "  private static final String[] REPLACEMENT_CHARS;",
+        "begin_line": 142,
+        "end_line": 142,
+        "comment": "\n   * From RFC 7159, \"All Unicode characters may be placed within the\n   * quotation marks except for the characters that must be escaped:\n   * quotation mark, reverse solidus, and the control characters\n   * (U+0000 through U+001F).\"\n   *\n   * We also escape '\\u2028' and '\\u2029', which JavaScript interprets as\n   * newline characters. This prevents eval() from failing with a syntax\n   * error. http://code.google.com/p/google-gson/issues/detail?id=341\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.HTML_SAFE_REPLACEMENT_CHARS",
+        "snippet": "  private static final String[] HTML_SAFE_REPLACEMENT_CHARS;",
+        "begin_line": 143,
+        "end_line": 143,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.out",
+        "snippet": "  private final Writer out;",
+        "begin_line": 165,
+        "end_line": 165,
+        "comment": " The output data, containing at most one top-level array or object. "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.stack",
+        "snippet": "  private int[] stack = new int[32];",
+        "begin_line": 167,
+        "end_line": 167,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.stackSize",
+        "snippet": "  private int stackSize = 0;",
+        "begin_line": 168,
+        "end_line": 168,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.indent",
+        "snippet": "  private String indent;",
+        "begin_line": 177,
+        "end_line": 177,
+        "comment": "\n   * A string containing a full set of spaces for a single level of\n   * indentation, or null for no pretty printing.\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.separator",
+        "snippet": "  private String separator = \":\";",
+        "begin_line": 182,
+        "end_line": 182,
+        "comment": "\n   * The name/value separator; either \":\" or \": \".\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.lenient",
+        "snippet": "  private boolean lenient;",
+        "begin_line": 184,
+        "end_line": 184,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.htmlSafe",
+        "snippet": "  private boolean htmlSafe;",
+        "begin_line": 186,
+        "end_line": 186,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.deferredName",
+        "snippet": "  private String deferredName;",
+        "begin_line": 188,
+        "end_line": 188,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonWriter",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonWriter.java",
+        "signature": "com.google.gson.stream.JsonWriter.serializeNulls",
+        "snippet": "  private boolean serializeNulls = true;",
+        "begin_line": 190,
+        "end_line": 190,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NON_EXECUTE_PREFIX",
+        "snippet": "  private static final char[] NON_EXECUTE_PREFIX = \")]}'\\n\".toCharArray();",
+        "begin_line": 192,
+        "end_line": 192,
+        "comment": " The only non-execute prefix this parser permits "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.MIN_INCOMPLETE_INTEGER",
+        "snippet": "  private static final long MIN_INCOMPLETE_INTEGER = Long.MIN_VALUE / 10;",
+        "begin_line": 193,
+        "end_line": 193,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_NONE",
+        "snippet": "  private static final int PEEKED_NONE = 0;",
+        "begin_line": 195,
+        "end_line": 195,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_BEGIN_OBJECT",
+        "snippet": "  private static final int PEEKED_BEGIN_OBJECT = 1;",
+        "begin_line": 196,
+        "end_line": 196,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_END_OBJECT",
+        "snippet": "  private static final int PEEKED_END_OBJECT = 2;",
+        "begin_line": 197,
+        "end_line": 197,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_BEGIN_ARRAY",
+        "snippet": "  private static final int PEEKED_BEGIN_ARRAY = 3;",
+        "begin_line": 198,
+        "end_line": 198,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_END_ARRAY",
+        "snippet": "  private static final int PEEKED_END_ARRAY = 4;",
+        "begin_line": 199,
+        "end_line": 199,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_TRUE",
+        "snippet": "  private static final int PEEKED_TRUE = 5;",
+        "begin_line": 200,
+        "end_line": 200,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_FALSE",
+        "snippet": "  private static final int PEEKED_FALSE = 6;",
+        "begin_line": 201,
+        "end_line": 201,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_NULL",
+        "snippet": "  private static final int PEEKED_NULL = 7;",
+        "begin_line": 202,
+        "end_line": 202,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_SINGLE_QUOTED",
+        "snippet": "  private static final int PEEKED_SINGLE_QUOTED = 8;",
+        "begin_line": 203,
+        "end_line": 203,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_DOUBLE_QUOTED",
+        "snippet": "  private static final int PEEKED_DOUBLE_QUOTED = 9;",
+        "begin_line": 204,
+        "end_line": 204,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_UNQUOTED",
+        "snippet": "  private static final int PEEKED_UNQUOTED = 10;",
+        "begin_line": 205,
+        "end_line": 205,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_BUFFERED",
+        "snippet": "  private static final int PEEKED_BUFFERED = 11;",
+        "begin_line": 207,
+        "end_line": 207,
+        "comment": " When this is returned, the string value is stored in peekedString. "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_SINGLE_QUOTED_NAME",
+        "snippet": "  private static final int PEEKED_SINGLE_QUOTED_NAME = 12;",
+        "begin_line": 208,
+        "end_line": 208,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_DOUBLE_QUOTED_NAME",
+        "snippet": "  private static final int PEEKED_DOUBLE_QUOTED_NAME = 13;",
+        "begin_line": 209,
+        "end_line": 209,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_UNQUOTED_NAME",
+        "snippet": "  private static final int PEEKED_UNQUOTED_NAME = 14;",
+        "begin_line": 210,
+        "end_line": 210,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_LONG",
+        "snippet": "  private static final int PEEKED_LONG = 15;",
+        "begin_line": 212,
+        "end_line": 212,
+        "comment": " When this is returned, the integer value is stored in peekedLong. "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_NUMBER",
+        "snippet": "  private static final int PEEKED_NUMBER = 16;",
+        "begin_line": 213,
+        "end_line": 213,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.PEEKED_EOF",
+        "snippet": "  private static final int PEEKED_EOF = 17;",
+        "begin_line": 214,
+        "end_line": 214,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_NONE",
+        "snippet": "  private static final int NUMBER_CHAR_NONE = 0;",
+        "begin_line": 217,
+        "end_line": 217,
+        "comment": " State machine when parsing numbers "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_SIGN",
+        "snippet": "  private static final int NUMBER_CHAR_SIGN = 1;",
+        "begin_line": 218,
+        "end_line": 218,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_DIGIT",
+        "snippet": "  private static final int NUMBER_CHAR_DIGIT = 2;",
+        "begin_line": 219,
+        "end_line": 219,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_DECIMAL",
+        "snippet": "  private static final int NUMBER_CHAR_DECIMAL = 3;",
+        "begin_line": 220,
+        "end_line": 220,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_FRACTION_DIGIT",
+        "snippet": "  private static final int NUMBER_CHAR_FRACTION_DIGIT = 4;",
+        "begin_line": 221,
+        "end_line": 221,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_EXP_E",
+        "snippet": "  private static final int NUMBER_CHAR_EXP_E = 5;",
+        "begin_line": 222,
+        "end_line": 222,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_EXP_SIGN",
+        "snippet": "  private static final int NUMBER_CHAR_EXP_SIGN = 6;",
+        "begin_line": 223,
+        "end_line": 223,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.NUMBER_CHAR_EXP_DIGIT",
+        "snippet": "  private static final int NUMBER_CHAR_EXP_DIGIT = 7;",
+        "begin_line": 224,
+        "end_line": 224,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.in",
+        "snippet": "  private final Reader in;",
+        "begin_line": 227,
+        "end_line": 227,
+        "comment": " The input JSON. "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.lenient",
+        "snippet": "  private boolean lenient = false;",
+        "begin_line": 230,
+        "end_line": 230,
+        "comment": " True to accept non-spec compliant JSON "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.buffer",
+        "snippet": "  private final char[] buffer = new char[1024];",
+        "begin_line": 238,
+        "end_line": 238,
+        "comment": "\n   * Use a manual buffer to easily read and unread upcoming characters, and\n   * also so we can create strings without an intermediate StringBuilder.\n   * We decode literals directly out of this buffer, so it must be at least as\n   * long as the longest token that can be reported as a number.\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.pos",
+        "snippet": "  private int pos = 0;",
+        "begin_line": 239,
+        "end_line": 239,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.limit",
+        "snippet": "  private int limit = 0;",
+        "begin_line": 240,
+        "end_line": 240,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.lineNumber",
+        "snippet": "  private int lineNumber = 0;",
+        "begin_line": 242,
+        "end_line": 242,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.lineStart",
+        "snippet": "  private int lineStart = 0;",
+        "begin_line": 243,
+        "end_line": 243,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.peeked",
+        "snippet": "  int peeked = PEEKED_NONE;",
+        "begin_line": 245,
+        "end_line": 245,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.peekedLong",
+        "snippet": "  private long peekedLong;",
+        "begin_line": 251,
+        "end_line": 251,
+        "comment": "\n   * A peeked value that was composed entirely of digits with an optional\n   * leading dash. Positive values may not have a leading 0.\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.peekedNumberLength",
+        "snippet": "  private int peekedNumberLength;",
+        "begin_line": 257,
+        "end_line": 257,
+        "comment": "\n   * The number of characters in a peeked number literal. Increment 'pos' by\n   * this after reading a number.\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.peekedString",
+        "snippet": "  private String peekedString;",
+        "begin_line": 264,
+        "end_line": 264,
+        "comment": "\n   * A peeked string that should be parsed on the next double, long or string.\n   * This is populated before a numeric value is parsed and used if that parsing\n   * fails.\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.stack",
+        "snippet": "  private int[] stack = new int[32];",
+        "begin_line": 269,
+        "end_line": 269,
+        "comment": "\n   * The nesting stack. Using a manual array rather than an ArrayList saves 20%.\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.stackSize",
+        "snippet": "  private int stackSize = 0;",
+        "begin_line": 270,
+        "end_line": 270,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.pathNames",
+        "snippet": "  private String[] pathNames = new String[32];",
+        "begin_line": 283,
+        "end_line": 283,
+        "comment": "\n   * The path members. It corresponds directly to stack: At indices where the\n   * stack contains an object (EMPTY_OBJECT, DANGLING_NAME or NONEMPTY_OBJECT),\n   * pathNames contains the name at this scope. Where it contains an array\n   * (EMPTY_ARRAY, NONEMPTY_ARRAY) pathIndices contains the current index in\n   * that array. Otherwise the value is undefined, and we take advantage of that\n   * by incrementing pathIndices when doing so isn't useful.\n   "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonReader",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonReader.java",
+        "signature": "com.google.gson.stream.JsonReader.pathIndices",
+        "snippet": "  private int[] pathIndices = new int[32];",
+        "begin_line": 284,
+        "end_line": 284,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.MalformedJsonException",
+        "src_path": "gson/src/main/java/com/google/gson/stream/MalformedJsonException.java",
+        "signature": "com.google.gson.stream.MalformedJsonException.serialVersionUID",
+        "snippet": "  private static final long serialVersionUID = 1L;",
+        "begin_line": 26,
+        "end_line": 26,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.EMPTY_ARRAY",
+        "snippet": "    static final int EMPTY_ARRAY = 1;",
+        "begin_line": 31,
+        "end_line": 31,
+        "comment": "\n     * An array with no elements requires no separators or newlines before\n     * it is closed.\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.NONEMPTY_ARRAY",
+        "snippet": "    static final int NONEMPTY_ARRAY = 2;",
+        "begin_line": 37,
+        "end_line": 37,
+        "comment": "\n     * A array with at least one value requires a comma and newline before\n     * the next element.\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.EMPTY_OBJECT",
+        "snippet": "    static final int EMPTY_OBJECT = 3;",
+        "begin_line": 43,
+        "end_line": 43,
+        "comment": "\n     * An object with no name/value pairs requires no separators or newlines\n     * before it is closed.\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.DANGLING_NAME",
+        "snippet": "    static final int DANGLING_NAME = 4;",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": "\n     * An object whose most recent element is a key. The next element must\n     * be a value.\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.NONEMPTY_OBJECT",
+        "snippet": "    static final int NONEMPTY_OBJECT = 5;",
+        "begin_line": 55,
+        "end_line": 55,
+        "comment": "\n     * An object with at least one name/value pair requires a comma and\n     * newline before the next element.\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.EMPTY_DOCUMENT",
+        "snippet": "    static final int EMPTY_DOCUMENT = 6;",
+        "begin_line": 60,
+        "end_line": 60,
+        "comment": "\n     * No object or array has been started.\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.NONEMPTY_DOCUMENT",
+        "snippet": "    static final int NONEMPTY_DOCUMENT = 7;",
+        "begin_line": 65,
+        "end_line": 65,
+        "comment": "\n     * A document with at an array or object.\n     "
+    },
+    {
+        "class_name": "com.google.gson.stream.JsonScope",
+        "src_path": "gson/src/main/java/com/google/gson/stream/JsonScope.java",
+        "signature": "com.google.gson.stream.JsonScope.CLOSED",
+        "snippet": "    static final int CLOSED = 8;",
+        "begin_line": 70,
+        "end_line": 70,
+        "comment": "\n     * A document that's been closed and cannot be accessed.\n     "
+    },
+    {
+        "class_name": "com.google.gson.reflect.TypeToken",
+        "src_path": "gson/src/main/java/com/google/gson/reflect/TypeToken.java",
+        "signature": "com.google.gson.reflect.TypeToken.rawType",
+        "snippet": "  final Class<? super T> rawType;",
+        "begin_line": 48,
+        "end_line": 48,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.reflect.TypeToken",
+        "src_path": "gson/src/main/java/com/google/gson/reflect/TypeToken.java",
+        "signature": "com.google.gson.reflect.TypeToken.type",
+        "snippet": "  final Type type;",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": ""
+    },
+    {
+        "class_name": "com.google.gson.reflect.TypeToken",
+        "src_path": "gson/src/main/java/com/google/gson/reflect/TypeToken.java",
+        "signature": "com.google.gson.reflect.TypeToken.hashCode",
+        "snippet": "  final int hashCode;",
+        "begin_line": 50,
+        "end_line": 50,
+        "comment": ""
+    }
+]

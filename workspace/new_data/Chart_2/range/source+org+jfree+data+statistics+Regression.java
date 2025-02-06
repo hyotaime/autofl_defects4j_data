@@ -1,0 +1,161 @@
+{
+  "filepath": "/tmp/Chart-2b/source/org/jfree/data/statistics/Regression.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "Regression",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 53,
+      "end_line": 373,
+      "comment": "\r\n * A utility class for fitting regression curves to data.\r\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.data.statistics.Regression.getOLSRegression(double[][])",
+      "begin_line": 64,
+      "end_line": 96,
+      "comment": "\r\n     * Returns the parameters \u0027a\u0027 and \u0027b\u0027 for an equation y \u003d a + bx, fitted to\r\n     * the data using ordinary least squares regression.  The result is\r\n     * returned as a double[], where result[0] --\u003e a, and result[1] --\u003e b.\r\n     *\r\n     * @param data  the data.\r\n     *\r\n     * @return The parameters.\r\n     ",
+      "child_ranges": [
+        "(line 66,col 9)-(line 66,col 28)",
+        "(line 67,col 9)-(line 69,col 9)",
+        "(line 71,col 9)-(line 71,col 24)",
+        "(line 72,col 9)-(line 72,col 24)",
+        "(line 73,col 9)-(line 73,col 25)",
+        "(line 74,col 9)-(line 74,col 25)",
+        "(line 75,col 9)-(line 84,col 9)",
+        "(line 85,col 9)-(line 85,col 47)",
+        "(line 86,col 9)-(line 86,col 47)",
+        "(line 87,col 9)-(line 87,col 31)",
+        "(line 88,col 9)-(line 88,col 31)",
+        "(line 90,col 9)-(line 90,col 40)",
+        "(line 91,col 9)-(line 91,col 30)",
+        "(line 92,col 9)-(line 92,col 44)",
+        "(line 94,col 9)-(line 94,col 22)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.data.statistics.Regression.getOLSRegression(org.jfree.data.xy.XYDataset, int)",
+      "begin_line": 108,
+      "end_line": 140,
+      "comment": "\r\n     * Returns the parameters \u0027a\u0027 and \u0027b\u0027 for an equation y \u003d a + bx, fitted to\r\n     * the data using ordinary least squares regression. The result is returned\r\n     * as a double[], where result[0] --\u003e a, and result[1] --\u003e b.\r\n     *\r\n     * @param data  the data.\r\n     * @param series  the series (zero-based index).\r\n     *\r\n     * @return The parameters.\r\n     ",
+      "child_ranges": [
+        "(line 110,col 9)-(line 110,col 42)",
+        "(line 111,col 9)-(line 113,col 9)",
+        "(line 115,col 9)-(line 115,col 24)",
+        "(line 116,col 9)-(line 116,col 24)",
+        "(line 117,col 9)-(line 117,col 25)",
+        "(line 118,col 9)-(line 118,col 25)",
+        "(line 119,col 9)-(line 128,col 9)",
+        "(line 129,col 9)-(line 129,col 47)",
+        "(line 130,col 9)-(line 130,col 47)",
+        "(line 131,col 9)-(line 131,col 31)",
+        "(line 132,col 9)-(line 132,col 31)",
+        "(line 134,col 9)-(line 134,col 40)",
+        "(line 135,col 9)-(line 135,col 30)",
+        "(line 136,col 9)-(line 136,col 44)",
+        "(line 138,col 9)-(line 138,col 22)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.data.statistics.Regression.getPowerRegression(double[][])",
+      "begin_line": 151,
+      "end_line": 183,
+      "comment": "\r\n     * Returns the parameters \u0027a\u0027 and \u0027b\u0027 for an equation y \u003d ax^b, fitted to\r\n     * the data using a power regression equation.  The result is returned as\r\n     * an array, where double[0] --\u003e a, and double[1] --\u003e b.\r\n     *\r\n     * @param data  the data.\r\n     *\r\n     * @return The parameters.\r\n     ",
+      "child_ranges": [
+        "(line 153,col 9)-(line 153,col 28)",
+        "(line 154,col 9)-(line 156,col 9)",
+        "(line 158,col 9)-(line 158,col 24)",
+        "(line 159,col 9)-(line 159,col 24)",
+        "(line 160,col 9)-(line 160,col 25)",
+        "(line 161,col 9)-(line 161,col 25)",
+        "(line 162,col 9)-(line 171,col 9)",
+        "(line 172,col 9)-(line 172,col 47)",
+        "(line 173,col 9)-(line 173,col 47)",
+        "(line 174,col 9)-(line 174,col 31)",
+        "(line 175,col 9)-(line 175,col 31)",
+        "(line 177,col 9)-(line 177,col 40)",
+        "(line 178,col 9)-(line 178,col 30)",
+        "(line 179,col 9)-(line 179,col 69)",
+        "(line 181,col 9)-(line 181,col 22)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.data.statistics.Regression.getPowerRegression(org.jfree.data.xy.XYDataset, int)",
+      "begin_line": 195,
+      "end_line": 227,
+      "comment": "\r\n     * Returns the parameters \u0027a\u0027 and \u0027b\u0027 for an equation y \u003d ax^b, fitted to\r\n     * the data using a power regression equation.  The result is returned as\r\n     * an array, where double[0] --\u003e a, and double[1] --\u003e b.\r\n     *\r\n     * @param data  the data.\r\n     * @param series  the series to fit the regression line against.\r\n     *\r\n     * @return The parameters.\r\n     ",
+      "child_ranges": [
+        "(line 197,col 9)-(line 197,col 42)",
+        "(line 198,col 9)-(line 200,col 9)",
+        "(line 202,col 9)-(line 202,col 24)",
+        "(line 203,col 9)-(line 203,col 24)",
+        "(line 204,col 9)-(line 204,col 25)",
+        "(line 205,col 9)-(line 205,col 25)",
+        "(line 206,col 9)-(line 215,col 9)",
+        "(line 216,col 9)-(line 216,col 47)",
+        "(line 217,col 9)-(line 217,col 47)",
+        "(line 218,col 9)-(line 218,col 31)",
+        "(line 219,col 9)-(line 219,col 31)",
+        "(line 221,col 9)-(line 221,col 40)",
+        "(line 222,col 9)-(line 222,col 30)",
+        "(line 223,col 9)-(line 223,col 69)",
+        "(line 225,col 9)-(line 225,col 22)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.data.statistics.Regression.getPolynomialRegression(org.jfree.data.xy.XYDataset, int, int)",
+      "begin_line": 248,
+      "end_line": 316,
+      "comment": "\r\n     * Returns the parameters \u0027a0\u0027, \u0027a1\u0027, \u0027a2\u0027, ..., \u0027an\u0027 for a polynomial\r\n     * function of order n, y \u003d a0 + a1 * x + a2 * x^2 + ... + an * x^n,\r\n     * fitted to the data using a polynomial regression equation.\r\n     * The result is returned as an array with a length of n + 2,\r\n     * where double[0] --\u003e a0, double[1] --\u003e a1, .., double[n] --\u003e an.\r\n     * and double[n + 1] is the correlation coefficient R2\r\n     * Reference: J. D. Faires, R. L. Burden, Numerische Methoden (german\r\n     * edition), pp. 243ff and 327ff.\r\n     *\r\n     * @param dataset  the dataset (\u003ccode\u003enull\u003c/code\u003e not permitted).\r\n     * @param series  the series to fit the regression line against (the series\r\n     *         must have at least order + 1 non-NaN items).\r\n     * @param order  the order of the function (\u003e 0).\r\n     *\r\n     * @return The parameters.\r\n     *\r\n     * @since 1.0.14\r\n     ",
+      "child_ranges": [
+        "(line 249,col 9)-(line 251,col 9)",
+        "(line 252,col 9)-(line 252,col 53)",
+        "(line 253,col 9)-(line 255,col 9)",
+        "(line 256,col 9)-(line 256,col 27)",
+        "(line 257,col 9)-(line 257,col 51)",
+        "(line 258,col 9)-(line 266,col 9)",
+        "(line 267,col 9)-(line 269,col 9)",
+        "(line 270,col 9)-(line 270,col 34)",
+        "(line 271,col 9)-(line 271,col 37)",
+        "(line 272,col 9)-(line 272,col 52)",
+        "(line 273,col 9)-(line 273,col 64)",
+        "(line 274,col 9)-(line 274,col 26)",
+        "(line 275,col 9)-(line 275,col 26)",
+        "(line 277,col 9)-(line 287,col 9)",
+        "(line 288,col 9)-(line 288,col 58)",
+        "(line 289,col 9)-(line 294,col 9)",
+        "(line 295,col 9)-(line 301,col 9)",
+        "(line 302,col 9)-(line 302,col 41)",
+        "(line 303,col 9)-(line 303,col 32)",
+        "(line 304,col 9)-(line 304,col 32)",
+        "(line 305,col 9)-(line 312,col 9)",
+        "(line 313,col 9)-(line 313,col 49)",
+        "(line 314,col 9)-(line 314,col 36)",
+        "(line 315,col 9)-(line 315,col 22)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.data.statistics.Regression.calculateSubMatrix(double[][])",
+      "begin_line": 328,
+      "end_line": 371,
+      "comment": "\r\n     * Returns a matrix with the following features: (1) the number of rows\r\n     * and columns is 1 less than that of the original matrix; (2)the matrix\r\n     * is triangular, i.e. all elements a (row, column) with column \u003e row are\r\n     * zero.  This method is used for calculating a polynomial regression.\r\n     *\r\n     * @param matrix  the start matrix.\r\n     *\r\n     * @return The new matrix.\r\n     ",
+      "child_ranges": [
+        "(line 329,col 9)-(line 329,col 38)",
+        "(line 330,col 9)-(line 330,col 44)",
+        "(line 331,col 9)-(line 331,col 72)",
+        "(line 332,col 9)-(line 338,col 9)",
+        "(line 339,col 9)-(line 341,col 9)",
+        "(line 343,col 9)-(line 362,col 9)",
+        "(line 363,col 9)-(line 363,col 58)",
+        "(line 364,col 9)-(line 369,col 9)",
+        "(line 370,col 9)-(line 370,col 22)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1631 @@
+[
+    {
+        "class_name": "org.jsoup.examples.FormattingVisitor",
+        "src_path": "src/main/java/org/jsoup/examples/HtmlToPlainText.java",
+        "signature": "org.jsoup.examples.FormattingVisitor.maxWidth",
+        "snippet": "        private static final int maxWidth = 80;",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.examples.FormattingVisitor",
+        "src_path": "src/main/java/org/jsoup/examples/HtmlToPlainText.java",
+        "signature": "org.jsoup.examples.FormattingVisitor.width",
+        "snippet": "        private int width = 0;",
+        "begin_line": 53,
+        "end_line": 53,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.examples.FormattingVisitor",
+        "src_path": "src/main/java/org/jsoup/examples/HtmlToPlainText.java",
+        "signature": "org.jsoup.examples.FormattingVisitor.accum",
+        "snippet": "        private StringBuilder accum = new StringBuilder(); // holds the accumulated text",
+        "begin_line": 54,
+        "end_line": 54,
+        "comment": " holds the accumulated text"
+    },
+    {
+        "class_name": "org.jsoup.parser.ParseError",
+        "src_path": "src/main/java/org/jsoup/parser/ParseError.java",
+        "signature": "org.jsoup.parser.ParseError.pos",
+        "snippet": "    private int pos;",
+        "begin_line": 7,
+        "end_line": 7,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.ParseError",
+        "src_path": "src/main/java/org/jsoup/parser/ParseError.java",
+        "signature": "org.jsoup.parser.ParseError.errorMsg",
+        "snippet": "    private String errorMsg;",
+        "begin_line": 8,
+        "end_line": 8,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Parser",
+        "src_path": "src/main/java/org/jsoup/parser/Parser.java",
+        "signature": "org.jsoup.parser.Parser.DEFAULT_MAX_ERRORS",
+        "snippet": "    private static final int DEFAULT_MAX_ERRORS = 0; // by default, error tracking is disabled.",
+        "begin_line": 14,
+        "end_line": 14,
+        "comment": " by default, error tracking is disabled."
+    },
+    {
+        "class_name": "org.jsoup.parser.Parser",
+        "src_path": "src/main/java/org/jsoup/parser/Parser.java",
+        "signature": "org.jsoup.parser.Parser.treeBuilder",
+        "snippet": "    private TreeBuilder treeBuilder;",
+        "begin_line": 16,
+        "end_line": 16,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Parser",
+        "src_path": "src/main/java/org/jsoup/parser/Parser.java",
+        "signature": "org.jsoup.parser.Parser.maxErrors",
+        "snippet": "    private int maxErrors = DEFAULT_MAX_ERRORS;",
+        "begin_line": 17,
+        "end_line": 17,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Parser",
+        "src_path": "src/main/java/org/jsoup/parser/Parser.java",
+        "signature": "org.jsoup.parser.Parser.errors",
+        "snippet": "    private ParseErrorList errors;",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/TreeBuilder.java",
+        "signature": "org.jsoup.parser.TreeBuilder.reader",
+        "snippet": "    CharacterReader reader;",
+        "begin_line": 15,
+        "end_line": 15,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/TreeBuilder.java",
+        "signature": "org.jsoup.parser.TreeBuilder.tokeniser",
+        "snippet": "    Tokeniser tokeniser;",
+        "begin_line": 16,
+        "end_line": 16,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/TreeBuilder.java",
+        "signature": "org.jsoup.parser.TreeBuilder.doc",
+        "snippet": "    protected Document doc; // current doc we are building into",
+        "begin_line": 17,
+        "end_line": 17,
+        "comment": " current doc we are building into"
+    },
+    {
+        "class_name": "org.jsoup.parser.TreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/TreeBuilder.java",
+        "signature": "org.jsoup.parser.TreeBuilder.stack",
+        "snippet": "    protected DescendableLinkedList<Element> stack; // the stack of open elements",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": " the stack of open elements"
+    },
+    {
+        "class_name": "org.jsoup.parser.TreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/TreeBuilder.java",
+        "signature": "org.jsoup.parser.TreeBuilder.baseUri",
+        "snippet": "    protected String baseUri; // current base uri, for creating new elements",
+        "begin_line": 19,
+        "end_line": 19,
+        "comment": " current base uri, for creating new elements"
+    },
+    {
+        "class_name": "org.jsoup.parser.TreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/TreeBuilder.java",
+        "signature": "org.jsoup.parser.TreeBuilder.currentToken",
+        "snippet": "    protected Token currentToken; // currentToken is used only for error tracking.",
+        "begin_line": 20,
+        "end_line": 20,
+        "comment": " currentToken is used only for error tracking."
+    },
+    {
+        "class_name": "org.jsoup.parser.TreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/TreeBuilder.java",
+        "signature": "org.jsoup.parser.TreeBuilder.errors",
+        "snippet": "    protected ParseErrorList errors; // null when not tracking errors",
+        "begin_line": 21,
+        "end_line": 21,
+        "comment": " null when not tracking errors"
+    },
+    {
+        "class_name": "org.jsoup.parser.Token",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Token.type",
+        "snippet": "    TokenType type;",
+        "begin_line": 11,
+        "end_line": 11,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Doctype",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Doctype.name",
+        "snippet": "        final StringBuilder name = new StringBuilder();",
+        "begin_line": 21,
+        "end_line": 21,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Doctype",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Doctype.publicIdentifier",
+        "snippet": "        final StringBuilder publicIdentifier = new StringBuilder();",
+        "begin_line": 22,
+        "end_line": 22,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Doctype",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Doctype.systemIdentifier",
+        "snippet": "        final StringBuilder systemIdentifier = new StringBuilder();",
+        "begin_line": 23,
+        "end_line": 23,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Doctype",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Doctype.forceQuirks",
+        "snippet": "        boolean forceQuirks = false;",
+        "begin_line": 24,
+        "end_line": 24,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Tag.tagName",
+        "snippet": "        protected String tagName;",
+        "begin_line": 48,
+        "end_line": 48,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Tag.pendingAttributeName",
+        "snippet": "        private String pendingAttributeName; // attribute names are generally caught in one hop, not accumulated",
+        "begin_line": 49,
+        "end_line": 49,
+        "comment": " attribute names are generally caught in one hop, not accumulated"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Tag.pendingAttributeValue",
+        "snippet": "        private StringBuilder pendingAttributeValue; // but values are accumulated, from e.g. & in hrefs",
+        "begin_line": 50,
+        "end_line": 50,
+        "comment": " but values are accumulated, from e.g. & in hrefs"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Tag.selfClosing",
+        "snippet": "        boolean selfClosing = false;",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Tag.attributes",
+        "snippet": "        Attributes attributes; // start tags get attributes on construction. End tags get attributes on first new attribute (but only for parser convenience, not used).",
+        "begin_line": 53,
+        "end_line": 53,
+        "comment": " start tags get attributes on construction. End tags get attributes on first new attribute (but only for parser convenience, not used)."
+    },
+    {
+        "class_name": "org.jsoup.parser.Comment",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Comment.data",
+        "snippet": "        final StringBuilder data = new StringBuilder();",
+        "begin_line": 170,
+        "end_line": 170,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Character",
+        "src_path": "src/main/java/org/jsoup/parser/Token.java",
+        "signature": "org.jsoup.parser.Character.data",
+        "snippet": "        private final String data;",
+        "begin_line": 187,
+        "end_line": 187,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.CharacterReader",
+        "src_path": "src/main/java/org/jsoup/parser/CharacterReader.java",
+        "signature": "org.jsoup.parser.CharacterReader.EOF",
+        "snippet": "    static final char EOF = (char) -1;",
+        "begin_line": 11,
+        "end_line": 11,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.CharacterReader",
+        "src_path": "src/main/java/org/jsoup/parser/CharacterReader.java",
+        "signature": "org.jsoup.parser.CharacterReader.input",
+        "snippet": "    private final char[] input;",
+        "begin_line": 13,
+        "end_line": 13,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.CharacterReader",
+        "src_path": "src/main/java/org/jsoup/parser/CharacterReader.java",
+        "signature": "org.jsoup.parser.CharacterReader.length",
+        "snippet": "    private final int length;",
+        "begin_line": 14,
+        "end_line": 14,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.CharacterReader",
+        "src_path": "src/main/java/org/jsoup/parser/CharacterReader.java",
+        "signature": "org.jsoup.parser.CharacterReader.pos",
+        "snippet": "    private int pos = 0;",
+        "begin_line": 15,
+        "end_line": 15,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.CharacterReader",
+        "src_path": "src/main/java/org/jsoup/parser/CharacterReader.java",
+        "signature": "org.jsoup.parser.CharacterReader.mark",
+        "snippet": "    private int mark = 0;",
+        "begin_line": 16,
+        "end_line": 16,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilderState",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilderState.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilderState.nullString",
+        "snippet": "    private static String nullString = String.valueOf('\\u0000');",
+        "begin_line": 1451,
+        "end_line": 1451,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.replacementChar",
+        "snippet": "    static final char replacementChar = '\\uFFFD'; // replaces null character",
+        "begin_line": 13,
+        "end_line": 13,
+        "comment": " replaces null character"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.reader",
+        "snippet": "    private CharacterReader reader; // html input",
+        "begin_line": 15,
+        "end_line": 15,
+        "comment": " html input"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.errors",
+        "snippet": "    private ParseErrorList errors; // errors found while tokenising",
+        "begin_line": 16,
+        "end_line": 16,
+        "comment": " errors found while tokenising"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.state",
+        "snippet": "    private TokeniserState state = TokeniserState.Data; // current tokenisation state",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": " current tokenisation state"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.emitPending",
+        "snippet": "    private Token emitPending; // the token we are about to emit on next read",
+        "begin_line": 19,
+        "end_line": 19,
+        "comment": " the token we are about to emit on next read"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.isEmitPending",
+        "snippet": "    private boolean isEmitPending = false;",
+        "begin_line": 20,
+        "end_line": 20,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.charBuffer",
+        "snippet": "    private StringBuilder charBuffer = new StringBuilder(); // buffers characters to output as one token",
+        "begin_line": 21,
+        "end_line": 21,
+        "comment": " buffers characters to output as one token"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.dataBuffer",
+        "snippet": "    StringBuilder dataBuffer; // buffers data looking for </script>",
+        "begin_line": 22,
+        "end_line": 22,
+        "comment": " buffers data looking for </script>"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.tagPending",
+        "snippet": "    Token.Tag tagPending; // tag we are building up",
+        "begin_line": 24,
+        "end_line": 24,
+        "comment": " tag we are building up"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.doctypePending",
+        "snippet": "    Token.Doctype doctypePending; // doctype building up",
+        "begin_line": 25,
+        "end_line": 25,
+        "comment": " doctype building up"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.commentPending",
+        "snippet": "    Token.Comment commentPending; // comment building up",
+        "begin_line": 26,
+        "end_line": 26,
+        "comment": " comment building up"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.lastStartTag",
+        "snippet": "    private Token.StartTag lastStartTag; // the last start tag emitted, to test appropriate end tag",
+        "begin_line": 27,
+        "end_line": 27,
+        "comment": " the last start tag emitted, to test appropriate end tag"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tokeniser",
+        "src_path": "src/main/java/org/jsoup/parser/Tokeniser.java",
+        "signature": "org.jsoup.parser.Tokeniser.selfClosingFlagAcknowledged",
+        "snippet": "    private boolean selfClosingFlagAcknowledged = true;",
+        "begin_line": 28,
+        "end_line": 28,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.state",
+        "snippet": "    private HtmlTreeBuilderState state; // the current state",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": " the current state"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.originalState",
+        "snippet": "    private HtmlTreeBuilderState originalState; // original / marked state",
+        "begin_line": 19,
+        "end_line": 19,
+        "comment": " original / marked state"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.baseUriSetFromDoc",
+        "snippet": "    private boolean baseUriSetFromDoc = false;",
+        "begin_line": 21,
+        "end_line": 21,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.headElement",
+        "snippet": "    private Element headElement; // the current head element",
+        "begin_line": 22,
+        "end_line": 22,
+        "comment": " the current head element"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.formElement",
+        "snippet": "    private Element formElement; // the current form element",
+        "begin_line": 23,
+        "end_line": 23,
+        "comment": " the current form element"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.contextElement",
+        "snippet": "    private Element contextElement; // fragment parse context -- could be null even if fragment parsing",
+        "begin_line": 24,
+        "end_line": 24,
+        "comment": " fragment parse context -- could be null even if fragment parsing"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.formattingElements",
+        "snippet": "    private DescendableLinkedList<Element> formattingElements = new DescendableLinkedList<Element>(); // active (open) formatting elements",
+        "begin_line": 25,
+        "end_line": 25,
+        "comment": " active (open) formatting elements"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.pendingTableCharacters",
+        "snippet": "    private List<Token.Character> pendingTableCharacters = new ArrayList<Token.Character>(); // chars in table to be shifted out",
+        "begin_line": 26,
+        "end_line": 26,
+        "comment": " chars in table to be shifted out"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.framesetOk",
+        "snippet": "    private boolean framesetOk = true; // if ok to go into frameset",
+        "begin_line": 28,
+        "end_line": 28,
+        "comment": " if ok to go into frameset"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.fosterInserts",
+        "snippet": "    private boolean fosterInserts = false; // if next inserts should be fostered",
+        "begin_line": 29,
+        "end_line": 29,
+        "comment": " if next inserts should be fostered"
+    },
+    {
+        "class_name": "org.jsoup.parser.HtmlTreeBuilder",
+        "src_path": "src/main/java/org/jsoup/parser/HtmlTreeBuilder.java",
+        "signature": "org.jsoup.parser.HtmlTreeBuilder.fragmentParsing",
+        "snippet": "    private boolean fragmentParsing = false; // if parsing a fragment of html",
+        "begin_line": 30,
+        "end_line": 30,
+        "comment": " if parsing a fragment of html"
+    },
+    {
+        "class_name": "org.jsoup.parser.TokeniserState",
+        "src_path": "src/main/java/org/jsoup/parser/TokeniserState.java",
+        "signature": "org.jsoup.parser.TokeniserState.nullChar",
+        "snippet": "    private static final char nullChar = '\\u0000';",
+        "begin_line": 1797,
+        "end_line": 1797,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TokeniserState",
+        "src_path": "src/main/java/org/jsoup/parser/TokeniserState.java",
+        "signature": "org.jsoup.parser.TokeniserState.replacementChar",
+        "snippet": "    private static final char replacementChar = Tokeniser.replacementChar;",
+        "begin_line": 1798,
+        "end_line": 1798,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TokeniserState",
+        "src_path": "src/main/java/org/jsoup/parser/TokeniserState.java",
+        "signature": "org.jsoup.parser.TokeniserState.replacementStr",
+        "snippet": "    private static final String replacementStr = String.valueOf(Tokeniser.replacementChar);",
+        "begin_line": 1799,
+        "end_line": 1799,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TokeniserState",
+        "src_path": "src/main/java/org/jsoup/parser/TokeniserState.java",
+        "signature": "org.jsoup.parser.TokeniserState.eof",
+        "snippet": "    private static final char eof = CharacterReader.EOF;",
+        "begin_line": 1800,
+        "end_line": 1800,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.ParseErrorList",
+        "src_path": "src/main/java/org/jsoup/parser/ParseErrorList.java",
+        "signature": "org.jsoup.parser.ParseErrorList.INITIAL_CAPACITY",
+        "snippet": "    private static final int INITIAL_CAPACITY = 16;",
+        "begin_line": 11,
+        "end_line": 11,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.ParseErrorList",
+        "src_path": "src/main/java/org/jsoup/parser/ParseErrorList.java",
+        "signature": "org.jsoup.parser.ParseErrorList.maxSize",
+        "snippet": "    private final int maxSize;",
+        "begin_line": 12,
+        "end_line": 12,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.tags",
+        "snippet": "    private static final Map<String, Tag> tags = new HashMap<String, Tag>(); // map of known tags",
+        "begin_line": 14,
+        "end_line": 14,
+        "comment": " map of known tags"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.tagName",
+        "snippet": "    private String tagName;",
+        "begin_line": 16,
+        "end_line": 16,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.isBlock",
+        "snippet": "    private boolean isBlock = true; // block or inline",
+        "begin_line": 17,
+        "end_line": 17,
+        "comment": " block or inline"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.formatAsBlock",
+        "snippet": "    private boolean formatAsBlock = true; // should be formatted as a block",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": " should be formatted as a block"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.canContainBlock",
+        "snippet": "    private boolean canContainBlock = true; // Can this tag hold block level tags?",
+        "begin_line": 19,
+        "end_line": 19,
+        "comment": " Can this tag hold block level tags?"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.canContainInline",
+        "snippet": "    private boolean canContainInline = true; // only pcdata if not",
+        "begin_line": 20,
+        "end_line": 20,
+        "comment": " only pcdata if not"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.empty",
+        "snippet": "    private boolean empty = false; // can hold nothing; e.g. img",
+        "begin_line": 21,
+        "end_line": 21,
+        "comment": " can hold nothing; e.g. img"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.selfClosing",
+        "snippet": "    private boolean selfClosing = false; // can self close (<foo />). used for unknown tags that self close, without forcing them as empty.",
+        "begin_line": 22,
+        "end_line": 22,
+        "comment": " can self close (<foo />). used for unknown tags that self close, without forcing them as empty."
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.preserveWhitespace",
+        "snippet": "    private boolean preserveWhitespace = false; // for pre, textarea, script etc",
+        "begin_line": 23,
+        "end_line": 23,
+        "comment": " for pre, textarea, script etc"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.blockTags",
+        "snippet": "    private static final String[] blockTags = {\n            \"html\", \"head\", \"body\", \"frameset\", \"script\", \"noscript\", \"style\", \"meta\", \"link\", \"title\", \"frame\",\n            \"noframes\", \"section\", \"nav\", \"aside\", \"hgroup\", \"header\", \"footer\", \"p\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\",\n            \"ul\", \"ol\", \"pre\", \"div\", \"blockquote\", \"hr\", \"address\", \"figure\", \"figcaption\", \"form\", \"fieldset\", \"ins\",\n            \"del\", \"dl\", \"dt\", \"dd\", \"li\", \"table\", \"caption\", \"thead\", \"tfoot\", \"tbody\", \"colgroup\", \"col\", \"tr\", \"th\",\n            \"td\", \"video\", \"audio\", \"canvas\", \"details\", \"menu\", \"plaintext\"\n    };",
+        "begin_line": 197,
+        "end_line": 203,
+        "comment": " prepped from http://www.w3.org/TR/REC-html40/sgml/dtd.html and other sources"
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.inlineTags",
+        "snippet": "    private static final String[] inlineTags = {\n            \"object\", \"base\", \"font\", \"tt\", \"i\", \"b\", \"u\", \"big\", \"small\", \"em\", \"strong\", \"dfn\", \"code\", \"samp\", \"kbd\",\n            \"var\", \"cite\", \"abbr\", \"time\", \"acronym\", \"mark\", \"ruby\", \"rt\", \"rp\", \"a\", \"img\", \"br\", \"wbr\", \"map\", \"q\",\n            \"sub\", \"sup\", \"bdo\", \"iframe\", \"embed\", \"span\", \"input\", \"select\", \"textarea\", \"label\", \"button\", \"optgroup\",\n            \"option\", \"legend\", \"datalist\", \"keygen\", \"output\", \"progress\", \"meter\", \"area\", \"param\", \"source\", \"track\",\n            \"summary\", \"command\", \"device\"\n    };",
+        "begin_line": 204,
+        "end_line": 210,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.emptyTags",
+        "snippet": "    private static final String[] emptyTags = {\n            \"meta\", \"link\", \"base\", \"frame\", \"img\", \"br\", \"wbr\", \"embed\", \"hr\", \"input\", \"keygen\", \"col\", \"command\",\n            \"device\"\n    };",
+        "begin_line": 211,
+        "end_line": 214,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.formatAsInlineTags",
+        "snippet": "    private static final String[] formatAsInlineTags = {\n            \"title\", \"a\", \"p\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"pre\", \"address\", \"li\", \"th\", \"td\", \"script\", \"style\"\n    };",
+        "begin_line": 215,
+        "end_line": 217,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.Tag",
+        "src_path": "src/main/java/org/jsoup/parser/Tag.java",
+        "signature": "org.jsoup.parser.Tag.preserveWhitespaceTags",
+        "snippet": "    private static final String[] preserveWhitespaceTags = {\"pre\", \"plaintext\", \"title\", \"textarea\"};",
+        "begin_line": 218,
+        "end_line": 218,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TokenQueue",
+        "src_path": "src/main/java/org/jsoup/parser/TokenQueue.java",
+        "signature": "org.jsoup.parser.TokenQueue.queue",
+        "snippet": "    private String queue;",
+        "begin_line": 12,
+        "end_line": 12,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TokenQueue",
+        "src_path": "src/main/java/org/jsoup/parser/TokenQueue.java",
+        "signature": "org.jsoup.parser.TokenQueue.pos",
+        "snippet": "    private int pos = 0;",
+        "begin_line": 13,
+        "end_line": 13,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.parser.TokenQueue",
+        "src_path": "src/main/java/org/jsoup/parser/TokenQueue.java",
+        "signature": "org.jsoup.parser.TokenQueue.ESC",
+        "snippet": "    private static final char ESC = '\\\\'; // escape char for chomp balanced.",
+        "begin_line": 15,
+        "end_line": 15,
+        "comment": " escape char for chomp balanced."
+    },
+    {
+        "class_name": "org.jsoup.helper.HttpConnection",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.HttpConnection.req",
+        "snippet": "    private Connection.Request req;",
+        "begin_line": 35,
+        "end_line": 35,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.HttpConnection",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.HttpConnection.res",
+        "snippet": "    private Connection.Response res;",
+        "begin_line": 36,
+        "end_line": 36,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Base",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Base.url",
+        "snippet": "        URL url;",
+        "begin_line": 181,
+        "end_line": 181,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Base",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Base.method",
+        "snippet": "        Method method;",
+        "begin_line": 182,
+        "end_line": 182,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Base",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Base.headers",
+        "snippet": "        Map<String, String> headers;",
+        "begin_line": 183,
+        "end_line": 183,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Base",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Base.cookies",
+        "snippet": "        Map<String, String> cookies;",
+        "begin_line": 184,
+        "end_line": 184,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Request",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Request.timeoutMilliseconds",
+        "snippet": "        private int timeoutMilliseconds;",
+        "begin_line": 293,
+        "end_line": 293,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Request",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Request.followRedirects",
+        "snippet": "        private boolean followRedirects;",
+        "begin_line": 294,
+        "end_line": 294,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Request",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Request.data",
+        "snippet": "        private Collection<Connection.KeyVal> data;",
+        "begin_line": 295,
+        "end_line": 295,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Request",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Request.ignoreHttpErrors",
+        "snippet": "        private boolean ignoreHttpErrors = false;",
+        "begin_line": 296,
+        "end_line": 296,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Request",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Request.ignoreContentType",
+        "snippet": "        private boolean ignoreContentType = false;",
+        "begin_line": 297,
+        "end_line": 297,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Request",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Request.parser",
+        "snippet": "        private Parser parser;",
+        "begin_line": 298,
+        "end_line": 298,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.MAX_REDIRECTS",
+        "snippet": "        private static final int MAX_REDIRECTS = 20;",
+        "begin_line": 367,
+        "end_line": 367,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.statusCode",
+        "snippet": "        private int statusCode;",
+        "begin_line": 368,
+        "end_line": 368,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.statusMessage",
+        "snippet": "        private String statusMessage;",
+        "begin_line": 369,
+        "end_line": 369,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.byteData",
+        "snippet": "        private ByteBuffer byteData;",
+        "begin_line": 370,
+        "end_line": 370,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.charset",
+        "snippet": "        private String charset;",
+        "begin_line": 371,
+        "end_line": 371,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.contentType",
+        "snippet": "        private String contentType;",
+        "begin_line": 372,
+        "end_line": 372,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.executed",
+        "snippet": "        private boolean executed = false;",
+        "begin_line": 373,
+        "end_line": 373,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.numRedirects",
+        "snippet": "        private int numRedirects = 0;",
+        "begin_line": 374,
+        "end_line": 374,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.Response",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.Response.req",
+        "snippet": "        private Connection.Request req;",
+        "begin_line": 375,
+        "end_line": 375,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.KeyVal",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.KeyVal.key",
+        "snippet": "        private String key;",
+        "begin_line": 622,
+        "end_line": 622,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.KeyVal",
+        "src_path": "src/main/java/org/jsoup/helper/HttpConnection.java",
+        "signature": "org.jsoup.helper.KeyVal.value",
+        "snippet": "        private String value;",
+        "begin_line": 623,
+        "end_line": 623,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.StringUtil",
+        "src_path": "src/main/java/org/jsoup/helper/StringUtil.java",
+        "signature": "org.jsoup.helper.StringUtil.padding",
+        "snippet": "    private static final String[] padding = {\"\", \" \", \"  \", \"   \", \"    \", \"     \", \"      \", \"       \", \"        \", \"         \", \"          \"};",
+        "begin_line": 11,
+        "end_line": 11,
+        "comment": " memoised padding up to 10"
+    },
+    {
+        "class_name": "org.jsoup.helper.DescendingIterator",
+        "src_path": "src/main/java/org/jsoup/helper/DescendableLinkedList.java",
+        "signature": "org.jsoup.helper.DescendingIterator.iter",
+        "snippet": "        private final ListIterator<E> iter;",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.DataUtil",
+        "src_path": "src/main/java/org/jsoup/helper/DataUtil.java",
+        "signature": "org.jsoup.helper.DataUtil.charsetPattern",
+        "snippet": "    private static final Pattern charsetPattern = Pattern.compile(\"(?i)\\\\bcharset=\\\\s*\\\"?([^\\\\s;\\\"]*)\");",
+        "begin_line": 19,
+        "end_line": 19,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.helper.DataUtil",
+        "src_path": "src/main/java/org/jsoup/helper/DataUtil.java",
+        "signature": "org.jsoup.helper.DataUtil.defaultCharset",
+        "snippet": "    static final String defaultCharset = \"UTF-8\"; // used if not found in header or meta charset",
+        "begin_line": 20,
+        "end_line": 20,
+        "comment": " used if not found in header or meta charset"
+    },
+    {
+        "class_name": "org.jsoup.helper.DataUtil",
+        "src_path": "src/main/java/org/jsoup/helper/DataUtil.java",
+        "signature": "org.jsoup.helper.DataUtil.bufferSize",
+        "snippet": "    private static final int bufferSize = 0x20000; // ~130K.",
+        "begin_line": 21,
+        "end_line": 21,
+        "comment": " ~130K."
+    },
+    {
+        "class_name": "org.jsoup.nodes.Comment",
+        "src_path": "src/main/java/org/jsoup/nodes/Comment.java",
+        "signature": "org.jsoup.nodes.Comment.COMMENT_KEY",
+        "snippet": "    private static final String COMMENT_KEY = \"comment\";",
+        "begin_line": 8,
+        "end_line": 8,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.DataNode",
+        "src_path": "src/main/java/org/jsoup/nodes/DataNode.java",
+        "signature": "org.jsoup.nodes.DataNode.DATA_KEY",
+        "snippet": "    private static final String DATA_KEY = \"data\";",
+        "begin_line": 8,
+        "end_line": 8,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Attributes",
+        "src_path": "src/main/java/org/jsoup/nodes/Attributes.java",
+        "signature": "org.jsoup.nodes.Attributes.dataPrefix",
+        "snippet": "    protected static final String dataPrefix = \"data-\";",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Attributes",
+        "src_path": "src/main/java/org/jsoup/nodes/Attributes.java",
+        "signature": "org.jsoup.nodes.Attributes.attributes",
+        "snippet": "    private LinkedHashMap<String, Attribute> attributes = null;",
+        "begin_line": 20,
+        "end_line": 20,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.DatasetIterator",
+        "src_path": "src/main/java/org/jsoup/nodes/Attributes.java",
+        "signature": "org.jsoup.nodes.DatasetIterator.attrIter",
+        "snippet": "            private Iterator<Attribute> attrIter = attributes.values().iterator();",
+        "begin_line": 226,
+        "end_line": 226,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.DatasetIterator",
+        "src_path": "src/main/java/org/jsoup/nodes/Attributes.java",
+        "signature": "org.jsoup.nodes.DatasetIterator.attr",
+        "snippet": "            private Attribute attr;",
+        "begin_line": 227,
+        "end_line": 227,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.map",
+        "snippet": "        private Map<Character, String> map;",
+        "begin_line": 24,
+        "end_line": 24,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.full",
+        "snippet": "    private static final Map<String, Character> full;",
+        "begin_line": 35,
+        "end_line": 35,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.xhtmlByVal",
+        "snippet": "    private static final Map<Character, String> xhtmlByVal;",
+        "begin_line": 36,
+        "end_line": 36,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.baseByVal",
+        "snippet": "    private static final Map<Character, String> baseByVal;",
+        "begin_line": 37,
+        "end_line": 37,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.fullByVal",
+        "snippet": "    private static final Map<Character, String> fullByVal;",
+        "begin_line": 38,
+        "end_line": 38,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.unescapePattern",
+        "snippet": "    private static final Pattern unescapePattern = Pattern.compile(\"&(#(x|X)?([0-9a-fA-F]+)|[a-zA-Z]+\\\\d*);?\");",
+        "begin_line": 39,
+        "end_line": 39,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.strictUnescapePattern",
+        "snippet": "    private static final Pattern strictUnescapePattern = Pattern.compile(\"&(#(x|X)?([0-9a-fA-F]+)|[a-zA-Z]+\\\\d*);\");",
+        "begin_line": 40,
+        "end_line": 40,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Entities",
+        "src_path": "src/main/java/org/jsoup/nodes/Entities.java",
+        "signature": "org.jsoup.nodes.Entities.xhtmlArray",
+        "snippet": "    private static final Object[][] xhtmlArray = {\n            {\"quot\", 0x00022},\n            {\"amp\", 0x00026},\n            {\"apos\", 0x00027},\n            {\"lt\", 0x0003C},\n            {\"gt\", 0x0003E}\n    };",
+        "begin_line": 129,
+        "end_line": 135,
+        "comment": " xhtml has restricted entities"
+    },
+    {
+        "class_name": "org.jsoup.nodes.Attribute",
+        "src_path": "src/main/java/org/jsoup/nodes/Attribute.java",
+        "signature": "org.jsoup.nodes.Attribute.key",
+        "snippet": "    private String key;",
+        "begin_line": 12,
+        "end_line": 12,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Attribute",
+        "src_path": "src/main/java/org/jsoup/nodes/Attribute.java",
+        "signature": "org.jsoup.nodes.Attribute.value",
+        "snippet": "    private String value;",
+        "begin_line": 13,
+        "end_line": 13,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.XmlDeclaration",
+        "src_path": "src/main/java/org/jsoup/nodes/XmlDeclaration.java",
+        "signature": "org.jsoup.nodes.XmlDeclaration.DECL_KEY",
+        "snippet": "    private static final String DECL_KEY = \"declaration\";",
+        "begin_line": 8,
+        "end_line": 8,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.XmlDeclaration",
+        "src_path": "src/main/java/org/jsoup/nodes/XmlDeclaration.java",
+        "signature": "org.jsoup.nodes.XmlDeclaration.isProcessingInstruction",
+        "snippet": "    private final boolean isProcessingInstruction; // <! if true, <? if false, declaration (and last data char should be ?)",
+        "begin_line": 9,
+        "end_line": 9,
+        "comment": " <! if true, <? if false, declaration (and last data char should be ?)"
+    },
+    {
+        "class_name": "org.jsoup.nodes.Element",
+        "src_path": "src/main/java/org/jsoup/nodes/Element.java",
+        "signature": "org.jsoup.nodes.Element.tag",
+        "snippet": "    private Tag tag;",
+        "begin_line": 25,
+        "end_line": 25,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Element",
+        "src_path": "src/main/java/org/jsoup/nodes/Element.java",
+        "signature": "org.jsoup.nodes.Element.classNames",
+        "snippet": "    private Set<String> classNames;",
+        "begin_line": 26,
+        "end_line": 26,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Document",
+        "src_path": "src/main/java/org/jsoup/nodes/Document.java",
+        "signature": "org.jsoup.nodes.Document.outputSettings",
+        "snippet": "    private OutputSettings outputSettings = new OutputSettings();",
+        "begin_line": 17,
+        "end_line": 17,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Document",
+        "src_path": "src/main/java/org/jsoup/nodes/Document.java",
+        "signature": "org.jsoup.nodes.Document.quirksMode",
+        "snippet": "    private QuirksMode quirksMode = QuirksMode.noQuirks;",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.OutputSettings",
+        "src_path": "src/main/java/org/jsoup/nodes/Document.java",
+        "signature": "org.jsoup.nodes.OutputSettings.escapeMode",
+        "snippet": "        private Entities.EscapeMode escapeMode = Entities.EscapeMode.base;",
+        "begin_line": 208,
+        "end_line": 208,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.OutputSettings",
+        "src_path": "src/main/java/org/jsoup/nodes/Document.java",
+        "signature": "org.jsoup.nodes.OutputSettings.charset",
+        "snippet": "        private Charset charset = Charset.forName(\"UTF-8\");",
+        "begin_line": 209,
+        "end_line": 209,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.OutputSettings",
+        "src_path": "src/main/java/org/jsoup/nodes/Document.java",
+        "signature": "org.jsoup.nodes.OutputSettings.charsetEncoder",
+        "snippet": "        private CharsetEncoder charsetEncoder = charset.newEncoder();",
+        "begin_line": 210,
+        "end_line": 210,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.OutputSettings",
+        "src_path": "src/main/java/org/jsoup/nodes/Document.java",
+        "signature": "org.jsoup.nodes.OutputSettings.prettyPrint",
+        "snippet": "        private boolean prettyPrint = true;",
+        "begin_line": 211,
+        "end_line": 211,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.OutputSettings",
+        "src_path": "src/main/java/org/jsoup/nodes/Document.java",
+        "signature": "org.jsoup.nodes.OutputSettings.indentAmount",
+        "snippet": "        private int indentAmount = 1;",
+        "begin_line": 212,
+        "end_line": 212,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Node",
+        "src_path": "src/main/java/org/jsoup/nodes/Node.java",
+        "signature": "org.jsoup.nodes.Node.parentNode",
+        "snippet": "    Node parentNode;",
+        "begin_line": 20,
+        "end_line": 20,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Node",
+        "src_path": "src/main/java/org/jsoup/nodes/Node.java",
+        "signature": "org.jsoup.nodes.Node.childNodes",
+        "snippet": "    List<Node> childNodes;",
+        "begin_line": 21,
+        "end_line": 21,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Node",
+        "src_path": "src/main/java/org/jsoup/nodes/Node.java",
+        "signature": "org.jsoup.nodes.Node.attributes",
+        "snippet": "    Attributes attributes;",
+        "begin_line": 22,
+        "end_line": 22,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Node",
+        "src_path": "src/main/java/org/jsoup/nodes/Node.java",
+        "signature": "org.jsoup.nodes.Node.baseUri",
+        "snippet": "    String baseUri;",
+        "begin_line": 23,
+        "end_line": 23,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.Node",
+        "src_path": "src/main/java/org/jsoup/nodes/Node.java",
+        "signature": "org.jsoup.nodes.Node.siblingIndex",
+        "snippet": "    int siblingIndex;",
+        "begin_line": 24,
+        "end_line": 24,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.OuterHtmlVisitor",
+        "src_path": "src/main/java/org/jsoup/nodes/Node.java",
+        "signature": "org.jsoup.nodes.OuterHtmlVisitor.accum",
+        "snippet": "        private StringBuilder accum;",
+        "begin_line": 600,
+        "end_line": 600,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.OuterHtmlVisitor",
+        "src_path": "src/main/java/org/jsoup/nodes/Node.java",
+        "signature": "org.jsoup.nodes.OuterHtmlVisitor.out",
+        "snippet": "        private Document.OutputSettings out;",
+        "begin_line": 601,
+        "end_line": 601,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.nodes.TextNode",
+        "src_path": "src/main/java/org/jsoup/nodes/TextNode.java",
+        "signature": "org.jsoup.nodes.TextNode.TEXT_KEY",
+        "snippet": "    private static final String TEXT_KEY = \"text\";",
+        "begin_line": 16,
+        "end_line": 16,
+        "comment": "\n    TextNode is a node, and so by default comes with attributes and children. The attributes are seldom used, but use\n    memory, and the child nodes are never used. So we don't have them, and override accessors to attributes to create\n    them as needed on the fly.\n     "
+    },
+    {
+        "class_name": "org.jsoup.nodes.TextNode",
+        "src_path": "src/main/java/org/jsoup/nodes/TextNode.java",
+        "signature": "org.jsoup.nodes.TextNode.text",
+        "snippet": "    String text;",
+        "begin_line": 17,
+        "end_line": 17,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Accumulator",
+        "src_path": "src/main/java/org/jsoup/select/Collector.java",
+        "signature": "org.jsoup.select.Accumulator.root",
+        "snippet": "        private final Element root;",
+        "begin_line": 29,
+        "end_line": 29,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Accumulator",
+        "src_path": "src/main/java/org/jsoup/select/Collector.java",
+        "signature": "org.jsoup.select.Accumulator.elements",
+        "snippet": "        private final Elements elements;",
+        "begin_line": 30,
+        "end_line": 30,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Accumulator",
+        "src_path": "src/main/java/org/jsoup/select/Collector.java",
+        "signature": "org.jsoup.select.Accumulator.eval",
+        "snippet": "        private final Evaluator eval;",
+        "begin_line": 31,
+        "end_line": 31,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.QueryParser",
+        "src_path": "src/main/java/org/jsoup/select/QueryParser.java",
+        "signature": "org.jsoup.select.QueryParser.combinators",
+        "snippet": "    private final static String[] combinators = {\",\", \">\", \"+\", \"~\", \" \"};",
+        "begin_line": 15,
+        "end_line": 15,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.QueryParser",
+        "src_path": "src/main/java/org/jsoup/select/QueryParser.java",
+        "signature": "org.jsoup.select.QueryParser.tq",
+        "snippet": "    private TokenQueue tq;",
+        "begin_line": 17,
+        "end_line": 17,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.QueryParser",
+        "src_path": "src/main/java/org/jsoup/select/QueryParser.java",
+        "signature": "org.jsoup.select.QueryParser.query",
+        "snippet": "    private String query;",
+        "begin_line": 18,
+        "end_line": 18,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.QueryParser",
+        "src_path": "src/main/java/org/jsoup/select/QueryParser.java",
+        "signature": "org.jsoup.select.QueryParser.evals",
+        "snippet": "    private List<Evaluator> evals = new ArrayList<Evaluator>();",
+        "begin_line": 19,
+        "end_line": 19,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Elements",
+        "src_path": "src/main/java/org/jsoup/select/Elements.java",
+        "signature": "org.jsoup.select.Elements.contents",
+        "snippet": "    private List<Element> contents;",
+        "begin_line": 16,
+        "end_line": 16,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.StructuralEvaluator",
+        "src_path": "src/main/java/org/jsoup/select/StructuralEvaluator.java",
+        "signature": "org.jsoup.select.StructuralEvaluator.evaluator",
+        "snippet": "    Evaluator evaluator;",
+        "begin_line": 9,
+        "end_line": 9,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Tag",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.Tag.tagName",
+        "snippet": "        private String tagName;",
+        "begin_line": 30,
+        "end_line": 30,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Id",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.Id.id",
+        "snippet": "        private String id;",
+        "begin_line": 51,
+        "end_line": 51,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Class",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.Class.className",
+        "snippet": "        private String className;",
+        "begin_line": 73,
+        "end_line": 73,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Attribute",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.Attribute.key",
+        "snippet": "        private String key;",
+        "begin_line": 95,
+        "end_line": 95,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.AttributeStarting",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.AttributeStarting.keyPrefix",
+        "snippet": "        private String keyPrefix;",
+        "begin_line": 117,
+        "end_line": 117,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.AttributeWithValueMatching",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.AttributeWithValueMatching.key",
+        "snippet": "        String key;",
+        "begin_line": 244,
+        "end_line": 244,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.AttributeWithValueMatching",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.AttributeWithValueMatching.pattern",
+        "snippet": "        Pattern pattern;",
+        "begin_line": 245,
+        "end_line": 245,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.AttributeKeyPair",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.AttributeKeyPair.key",
+        "snippet": "        String key;",
+        "begin_line": 268,
+        "end_line": 268,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.AttributeKeyPair",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.AttributeKeyPair.value",
+        "snippet": "        String value;",
+        "begin_line": 269,
+        "end_line": 269,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.IndexEvaluator",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.IndexEvaluator.index",
+        "snippet": "        int index;",
+        "begin_line": 362,
+        "end_line": 362,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.ContainsText",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.ContainsText.searchText",
+        "snippet": "        private String searchText;",
+        "begin_line": 373,
+        "end_line": 373,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.ContainsOwnText",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.ContainsOwnText.searchText",
+        "snippet": "        private String searchText;",
+        "begin_line": 394,
+        "end_line": 394,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Matches",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.Matches.pattern",
+        "snippet": "        private Pattern pattern;",
+        "begin_line": 415,
+        "end_line": 415,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.MatchesOwn",
+        "src_path": "src/main/java/org/jsoup/select/Evaluator.java",
+        "signature": "org.jsoup.select.MatchesOwn.pattern",
+        "snippet": "        private Pattern pattern;",
+        "begin_line": 437,
+        "end_line": 437,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.CombiningEvaluator",
+        "src_path": "src/main/java/org/jsoup/select/CombiningEvaluator.java",
+        "signature": "org.jsoup.select.CombiningEvaluator.evaluators",
+        "snippet": "    final List<Evaluator> evaluators;",
+        "begin_line": 15,
+        "end_line": 15,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.NodeTraversor",
+        "src_path": "src/main/java/org/jsoup/select/NodeTraversor.java",
+        "signature": "org.jsoup.select.NodeTraversor.visitor",
+        "snippet": "    private NodeVisitor visitor;",
+        "begin_line": 11,
+        "end_line": 11,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Selector",
+        "src_path": "src/main/java/org/jsoup/select/Selector.java",
+        "signature": "org.jsoup.select.Selector.evaluator",
+        "snippet": "    private final Evaluator evaluator;",
+        "begin_line": 57,
+        "end_line": 57,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.select.Selector",
+        "src_path": "src/main/java/org/jsoup/select/Selector.java",
+        "signature": "org.jsoup.select.Selector.root",
+        "snippet": "    private final Element root;",
+        "begin_line": 58,
+        "end_line": 58,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.safety.Whitelist",
+        "src_path": "src/main/java/org/jsoup/safety/Whitelist.java",
+        "signature": "org.jsoup.safety.Whitelist.tagNames",
+        "snippet": "    private Set<TagName> tagNames; // tags allowed, lower case. e.g. [p, br, span]",
+        "begin_line": 51,
+        "end_line": 51,
+        "comment": " tags allowed, lower case. e.g. [p, br, span]"
+    },
+    {
+        "class_name": "org.jsoup.safety.Whitelist",
+        "src_path": "src/main/java/org/jsoup/safety/Whitelist.java",
+        "signature": "org.jsoup.safety.Whitelist.attributes",
+        "snippet": "    private Map<TagName, Set<AttributeKey>> attributes; // tag -> attribute[]. allowed attributes [href] for a tag.",
+        "begin_line": 52,
+        "end_line": 52,
+        "comment": " tag -> attribute[]. allowed attributes [href] for a tag."
+    },
+    {
+        "class_name": "org.jsoup.safety.Whitelist",
+        "src_path": "src/main/java/org/jsoup/safety/Whitelist.java",
+        "signature": "org.jsoup.safety.Whitelist.enforcedAttributes",
+        "snippet": "    private Map<TagName, Map<AttributeKey, AttributeValue>> enforcedAttributes; // always set these attribute values",
+        "begin_line": 53,
+        "end_line": 53,
+        "comment": " always set these attribute values"
+    },
+    {
+        "class_name": "org.jsoup.safety.Whitelist",
+        "src_path": "src/main/java/org/jsoup/safety/Whitelist.java",
+        "signature": "org.jsoup.safety.Whitelist.protocols",
+        "snippet": "    private Map<TagName, Map<AttributeKey, Set<Protocol>>> protocols; // allowed URL protocols for attributes",
+        "begin_line": 54,
+        "end_line": 54,
+        "comment": " allowed URL protocols for attributes"
+    },
+    {
+        "class_name": "org.jsoup.safety.Whitelist",
+        "src_path": "src/main/java/org/jsoup/safety/Whitelist.java",
+        "signature": "org.jsoup.safety.Whitelist.preserveRelativeLinks",
+        "snippet": "    private boolean preserveRelativeLinks; // option to preserve relative links",
+        "begin_line": 55,
+        "end_line": 55,
+        "comment": " option to preserve relative links"
+    },
+    {
+        "class_name": "org.jsoup.safety.TypedValue",
+        "src_path": "src/main/java/org/jsoup/safety/Whitelist.java",
+        "signature": "org.jsoup.safety.TypedValue.value",
+        "snippet": "        private String value;",
+        "begin_line": 418,
+        "end_line": 418,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.safety.Cleaner",
+        "src_path": "src/main/java/org/jsoup/safety/Cleaner.java",
+        "signature": "org.jsoup.safety.Cleaner.whitelist",
+        "snippet": "    private Whitelist whitelist;",
+        "begin_line": 22,
+        "end_line": 22,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.safety.ElementMeta",
+        "src_path": "src/main/java/org/jsoup/safety/Cleaner.java",
+        "signature": "org.jsoup.safety.ElementMeta.el",
+        "snippet": "        Element el;",
+        "begin_line": 120,
+        "end_line": 120,
+        "comment": ""
+    },
+    {
+        "class_name": "org.jsoup.safety.ElementMeta",
+        "src_path": "src/main/java/org/jsoup/safety/Cleaner.java",
+        "signature": "org.jsoup.safety.ElementMeta.numAttribsDiscarded",
+        "snippet": "        int numAttribsDiscarded;",
+        "begin_line": 121,
+        "end_line": 121,
+        "comment": ""
+    }
+]

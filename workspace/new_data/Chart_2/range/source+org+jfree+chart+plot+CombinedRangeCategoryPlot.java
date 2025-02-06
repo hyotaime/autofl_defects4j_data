@@ -1,0 +1,309 @@
+{
+  "filepath": "/tmp/Chart-2b/source/org/jfree/chart/plot/CombinedRangeCategoryPlot.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CombinedRangeCategoryPlot",
+      "is_interface": false,
+      "parent_types": [
+        "org.jfree.chart.plot.CategoryPlot",
+        "org.jfree.chart.event.PlotChangeListener"
+      ],
+      "begin_line": 89,
+      "end_line": 570,
+      "comment": "\r\n * A combined category plot where the range axis is shared.\r\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 93,
+      "end_line": 93,
+      "comment": " For serialization. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "subplots"
+      ],
+      "begin_line": 96,
+      "end_line": 96,
+      "comment": " Storage for the subplot references. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "gap"
+      ],
+      "begin_line": 99,
+      "end_line": 99,
+      "comment": " The gap between subplots. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "subplotArea"
+      ],
+      "begin_line": 102,
+      "end_line": 102,
+      "comment": " TODO: move to plot state"
+    },
+    {
+      "type": "constructor",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.CombinedRangeCategoryPlot()",
+      "begin_line": 107,
+      "end_line": 109,
+      "comment": "\r\n     * Default constructor.\r\n     ",
+      "child_ranges": [
+        "(line 108,col 9)-(line 108,col 31)"
+      ]
+    },
+    {
+      "type": "constructor",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.CombinedRangeCategoryPlot(org.jfree.chart.axis.ValueAxis)",
+      "begin_line": 116,
+      "end_line": 120,
+      "comment": "\r\n     * Creates a new plot.\r\n     *\r\n     * @param rangeAxis  the shared range axis.\r\n     ",
+      "child_ranges": [
+        "(line 117,col 9)-(line 117,col 43)",
+        "(line 118,col 9)-(line 118,col 50)",
+        "(line 119,col 9)-(line 119,col 23)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.getGap()",
+      "begin_line": 127,
+      "end_line": 129,
+      "comment": "\r\n     * Returns the space between subplots.\r\n     *\r\n     * @return The gap (in Java2D units).\r\n     ",
+      "child_ranges": [
+        "(line 128,col 9)-(line 128,col 24)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.setGap(double)",
+      "begin_line": 137,
+      "end_line": 140,
+      "comment": "\r\n     * Sets the amount of space between subplots and sends a\r\n     * {@link PlotChangeEvent} to all registered listeners.\r\n     *\r\n     * @param gap  the gap between subplots (in Java2D units).\r\n     ",
+      "child_ranges": [
+        "(line 138,col 9)-(line 138,col 23)",
+        "(line 139,col 9)-(line 139,col 26)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.add(org.jfree.chart.plot.CategoryPlot)",
+      "begin_line": 151,
+      "end_line": 154,
+      "comment": "\r\n     * Adds a subplot (with a default \u0027weight\u0027 of 1) and sends a\r\n     * {@link PlotChangeEvent} to all registered listeners.\r\n     * \u003cbr\u003e\u003cbr\u003e\r\n     * You must ensure that the subplot has a non-null domain axis.  The range\r\n     * axis for the subplot will be set to \u003ccode\u003enull\u003c/code\u003e.\r\n     *\r\n     * @param subplot  the subplot (\u003ccode\u003enull\u003c/code\u003e not permitted).\r\n     ",
+      "child_ranges": [
+        "(line 153,col 9)-(line 153,col 24)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.add(org.jfree.chart.plot.CategoryPlot, int)",
+      "begin_line": 166,
+      "end_line": 187,
+      "comment": "\r\n     * Adds a subplot and sends a {@link PlotChangeEvent} to all registered\r\n     * listeners.\r\n     * \u003cbr\u003e\u003cbr\u003e\r\n     * You must ensure that the subplot has a non-null domain axis.  The range\r\n     * axis for the subplot will be set to \u003ccode\u003enull\u003c/code\u003e.\r\n     *\r\n     * @param subplot  the subplot (\u003ccode\u003enull\u003c/code\u003e not permitted).\r\n     * @param weight  the weight (must be \u003e\u003d 1).\r\n     ",
+      "child_ranges": [
+        "(line 167,col 9)-(line 169,col 9)",
+        "(line 170,col 9)-(line 172,col 9)",
+        "(line 174,col 9)-(line 174,col 32)",
+        "(line 175,col 9)-(line 175,col 34)",
+        "(line 176,col 9)-(line 176,col 67)",
+        "(line 177,col 9)-(line 177,col 35)",
+        "(line 178,col 9)-(line 178,col 49)",
+        "(line 179,col 9)-(line 179,col 40)",
+        "(line 180,col 9)-(line 180,col 35)",
+        "(line 182,col 9)-(line 182,col 40)",
+        "(line 183,col 9)-(line 185,col 9)",
+        "(line 186,col 9)-(line 186,col 26)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.remove(org.jfree.chart.plot.CategoryPlot)",
+      "begin_line": 194,
+      "end_line": 223,
+      "comment": "\r\n     * Removes a subplot from the combined chart.\r\n     *\r\n     * @param subplot  the subplot (\u003ccode\u003enull\u003c/code\u003e not permitted).\r\n     ",
+      "child_ranges": [
+        "(line 195,col 9)-(line 197,col 9)",
+        "(line 198,col 9)-(line 198,col 26)",
+        "(line 199,col 9)-(line 199,col 40)",
+        "(line 200,col 9)-(line 200,col 18)",
+        "(line 201,col 9)-(line 206,col 9)",
+        "(line 207,col 9)-(line 222,col 9)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.getSubplots()",
+      "begin_line": 231,
+      "end_line": 238,
+      "comment": "\r\n     * Returns the list of subplots.  The returned list may be empty, but is\r\n     * never \u003ccode\u003enull\u003c/code\u003e.\r\n     *\r\n     * @return An unmodifiable list of subplots.\r\n     ",
+      "child_ranges": [
+        "(line 232,col 9)-(line 237,col 9)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.calculateAxisSpace(java.awt.Graphics2D, java.awt.geom.Rectangle2D)",
+      "begin_line": 248,
+      "end_line": 321,
+      "comment": "\r\n     * Calculates the space required for the axes.\r\n     *\r\n     * @param g2  the graphics device.\r\n     * @param plotArea  the plot area.\r\n     *\r\n     * @return The space required for the axes.\r\n     ",
+      "child_ranges": [
+        "(line 251,col 9)-(line 251,col 42)",
+        "(line 252,col 9)-(line 252,col 55)",
+        "(line 255,col 9)-(line 255,col 51)",
+        "(line 256,col 9)-(line 274,col 9)",
+        "(line 276,col 9)-(line 276,col 68)",
+        "(line 278,col 9)-(line 278,col 37)",
+        "(line 279,col 9)-(line 279,col 28)",
+        "(line 280,col 9)-(line 283,col 9)",
+        "(line 286,col 9)-(line 286,col 46)",
+        "(line 287,col 9)-(line 287,col 43)",
+        "(line 288,col 9)-(line 288,col 43)",
+        "(line 289,col 9)-(line 289,col 32)",
+        "(line 290,col 9)-(line 295,col 9)",
+        "(line 297,col 9)-(line 318,col 9)",
+        "(line 320,col 9)-(line 320,col 21)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo)",
+      "begin_line": 336,
+      "end_line": 387,
+      "comment": "\r\n     * Draws the plot on a Java 2D graphics device (such as the screen or a\r\n     * printer).  Will perform all the placement calculations for each\r\n     * sub-plots and then tell these to draw themselves.\r\n     *\r\n     * @param g2  the graphics device.\r\n     * @param area  the area within which the plot (including axis labels)\r\n     *              should be drawn.\r\n     * @param anchor  the anchor point (\u003ccode\u003enull\u003c/code\u003e permitted).\r\n     * @param parentState  the parent state.\r\n     * @param info  collects information about the drawing (\u003ccode\u003enull\u003c/code\u003e\r\n     *              permitted).\r\n     ",
+      "child_ranges": [
+        "(line 341,col 9)-(line 343,col 9)",
+        "(line 346,col 9)-(line 346,col 45)",
+        "(line 347,col 9)-(line 347,col 26)",
+        "(line 350,col 9)-(line 350,col 55)",
+        "(line 351,col 9)-(line 351,col 56)",
+        "(line 354,col 9)-(line 354,col 50)",
+        "(line 357,col 9)-(line 357,col 40)",
+        "(line 358,col 9)-(line 358,col 53)",
+        "(line 359,col 9)-(line 359,col 70)",
+        "(line 360,col 9)-(line 361,col 22)",
+        "(line 362,col 9)-(line 364,col 9)",
+        "(line 365,col 9)-(line 365,col 59)",
+        "(line 368,col 9)-(line 381,col 9)",
+        "(line 383,col 9)-(line 385,col 9)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.setOrientation(org.jfree.chart.plot.PlotOrientation)",
+      "begin_line": 394,
+      "end_line": 404,
+      "comment": "\r\n     * Sets the orientation for the plot (and all the subplots).\r\n     *\r\n     * @param orientation  the orientation.\r\n     ",
+      "child_ranges": [
+        "(line 396,col 9)-(line 396,col 42)",
+        "(line 398,col 9)-(line 398,col 53)",
+        "(line 399,col 9)-(line 402,col 9)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.getDataRange(org.jfree.chart.axis.ValueAxis)",
+      "begin_line": 419,
+      "end_line": 429,
+      "comment": "\r\n     * Returns a range representing the extent of the data values in this plot\r\n     * (obtained from the subplots) that will be rendered against the specified\r\n     * axis.  NOTE: This method is intended for internal JFreeChart use, and\r\n     * is public only so that code in the axis classes can call it.  Since\r\n     * only the range axis is shared between subplots, the JFreeChart code\r\n     * will only call this method for the range values (although this is not\r\n     * checked/enforced).\r\n      *\r\n      * @param axis  the axis.\r\n      *\r\n      * @return The range.\r\n      ",
+      "child_ranges": [
+        "(line 420,col 10)-(line 420,col 29)",
+        "(line 421,col 10)-(line 427,col 10)",
+        "(line 428,col 10)-(line 428,col 23)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.getLegendItems()",
+      "begin_line": 436,
+      "end_line": 450,
+      "comment": "\r\n     * Returns a collection of legend items for the plot.\r\n     *\r\n     * @return The legend items.\r\n     ",
+      "child_ranges": [
+        "(line 437,col 9)-(line 437,col 60)",
+        "(line 438,col 9)-(line 448,col 9)",
+        "(line 449,col 9)-(line 449,col 22)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.setFixedDomainAxisSpaceForSubplots(org.jfree.chart.axis.AxisSpace)",
+      "begin_line": 458,
+      "end_line": 464,
+      "comment": "\r\n     * Sets the size (width or height, depending on the orientation of the\r\n     * plot) for the domain axis of each subplot.\r\n     *\r\n     * @param space  the space.\r\n     ",
+      "child_ranges": [
+        "(line 459,col 9)-(line 459,col 53)",
+        "(line 460,col 9)-(line 463,col 9)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.handleClick(int, int, org.jfree.chart.plot.PlotRenderingInfo)",
+      "begin_line": 474,
+      "end_line": 485,
+      "comment": "\r\n     * Handles a \u0027click\u0027 on the plot by updating the anchor value.\r\n     *\r\n     * @param x  x-coordinate of the click.\r\n     * @param y  y-coordinate of the click.\r\n     * @param info  information about the plot\u0027s dimensions.\r\n     *\r\n     ",
+      "child_ranges": [
+        "(line 476,col 9)-(line 476,col 50)",
+        "(line 477,col 9)-(line 483,col 9)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.plotChanged(org.jfree.chart.event.PlotChangeEvent)",
+      "begin_line": 493,
+      "end_line": 495,
+      "comment": "\r\n     * Receives a {@link PlotChangeEvent} and responds by notifying all\r\n     * listeners.\r\n     *\r\n     * @param event  the event.\r\n     ",
+      "child_ranges": [
+        "(line 494,col 9)-(line 494,col 31)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.equals(java.lang.Object)",
+      "begin_line": 504,
+      "end_line": 519,
+      "comment": "\r\n     * Tests the plot for equality with an arbitrary object.\r\n     *\r\n     * @param obj  the object (\u003ccode\u003enull\u003c/code\u003e permitted).\r\n     *\r\n     * @return \u003ccode\u003etrue\u003c/code\u003e or \u003ccode\u003efalse\u003c/code\u003e.\r\n     ",
+      "child_ranges": [
+        "(line 505,col 9)-(line 507,col 9)",
+        "(line 508,col 9)-(line 510,col 9)",
+        "(line 511,col 9)-(line 511,col 73)",
+        "(line 512,col 9)-(line 514,col 9)",
+        "(line 515,col 9)-(line 517,col 9)",
+        "(line 518,col 9)-(line 518,col 33)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.clone()",
+      "begin_line": 529,
+      "end_line": 546,
+      "comment": "\r\n     * Returns a clone of the plot.\r\n     *\r\n     * @return A clone.\r\n     *\r\n     * @throws CloneNotSupportedException  this class will not throw this\r\n     *         exception, but subclasses (if any) might.\r\n     ",
+      "child_ranges": [
+        "(line 530,col 9)-(line 531,col 56)",
+        "(line 532,col 9)-(line 532,col 74)",
+        "(line 533,col 9)-(line 536,col 9)",
+        "(line 540,col 9)-(line 540,col 52)",
+        "(line 541,col 9)-(line 543,col 9)",
+        "(line 545,col 9)-(line 545,col 22)"
+      ]
+    },
+    {
+      "type": "method",
+      "signature": "org.jfree.chart.plot.CombinedRangeCategoryPlot.readObject(java.io.ObjectInputStream)",
+      "begin_line": 556,
+      "end_line": 568,
+      "comment": "\r\n     * Provides serialization support.\r\n     *\r\n     * @param stream  the input stream.\r\n     *\r\n     * @throws IOException  if there is an I/O error.\r\n     * @throws ClassNotFoundException  if there is a classpath problem.\r\n     ",
+      "child_ranges": [
+        "(line 559,col 9)-(line 559,col 35)",
+        "(line 563,col 9)-(line 563,col 45)",
+        "(line 564,col 9)-(line 566,col 9)"
+      ]
+    }
+  ]
+}
