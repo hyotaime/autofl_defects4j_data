@@ -372,7 +372,7 @@ if __name__ == "__main__":
         "Cli_30",
         "Closure_2",
         "Closure_171",
-        # "Codec_5", # UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 2823: invalid continuation byte
+        # "Codec_5",  # UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 2823: invalid continuation byte
         "Codec_13",
         "Codec_17",
         "Csv_4",
@@ -400,7 +400,7 @@ if __name__ == "__main__":
         "Math_4",
         "Math_70",
         "Math_79",
-        # "Mockito_18", # AssertionError
+        # "Mockito_18",  # AssertionError -> tmply comment out line 69-71
         "Mockito_38"
     ]
 
@@ -509,6 +509,7 @@ if __name__ == "__main__":
         for test_class in test_range_files:
             with open(test_range_files[test_class], "r") as f:
                 range_data = json.load(f)
+            # with open(range_data["filepath"], "r", encoding="latin-1") as f: # @Codec-5 UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 2823: invalid continuation byte
             with open(range_data["filepath"], "r") as f:
                 code_lines = f.read().splitlines()
             # save test snippet info
